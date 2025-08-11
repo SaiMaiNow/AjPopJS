@@ -159,8 +159,6 @@ body {
     border-top: 1px solid #333;
 }
 
-/* New CSS for About Page */
-
 /* Page Title Section */
 .page-title {
     padding: 100px 0 0 0;
@@ -203,57 +201,63 @@ body {
     text-decoration: none;
 }
 
-.page-title .breadcrumbs ol li+li::before {
+.page-title .breadcrumbs ol li + li::before {
     display: inline-block;
     padding-right: 10px;
     color: #888;
     content: "/";
 }
 
-/* About Section */
-.about .content h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #00BFFF;
-    margin-bottom: 1rem;
+/* Projects Section */
+.projects {
+    padding: 60px 0;
 }
 
-.about .content p {
+.project-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.project-item img {
+    display: block;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.project-item:hover img {
+    transform: scale(1.1);
+}
+
+.project-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-item:hover .project-info {
+    transform: translateY(0);
+}
+
+.project-info h4 {
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.project-info p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
     color: #ccc;
 }
 
-.about .content ul {
-    list-style: none;
-    padding: 0;
-}
-
-.about .content ul li {
-    padding-bottom: 10px;
-    position: relative;
-}
-
-.about .content ul i {
-    font-size: 1.2rem;
+.project-info a {
     color: #00BFFF;
-    margin-right: 5px;
-}
-
-.about .content ul strong {
-    color: #fff;
-    font-weight: 600;
-    margin-right: 5px;
-}
-
-.about .img-fluid {
-    width: 100%;
-    height: auto;
-    max-width: 400px;
-    margin: 0 auto;
-    display: block;
-}
-
-@media (max-width: 991px) {
-    .about .content {
-        margin-top: 20px;
-    }
+    font-size: 1.5rem;
 }

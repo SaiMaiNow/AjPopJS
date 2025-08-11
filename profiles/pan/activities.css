@@ -159,8 +159,6 @@ body {
     border-top: 1px solid #333;
 }
 
-/* New CSS for About Page */
-
 /* Page Title Section */
 .page-title {
     padding: 100px 0 0 0;
@@ -210,50 +208,105 @@ body {
     content: "/";
 }
 
-/* About Section */
-.about .content h2 {
-    font-size: 2rem;
+/* Activities Timeline Section */
+.activities {
+    padding: 60px 0;
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #333;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 40px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    left: 13px;
+    top: 5px;
+    background-color: #00BFFF;
+    border: 2px solid #fff;
+    z-index: 1;
+}
+
+.timeline-date {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00BFFF;
+    color: #fff;
+    border-radius: 50%;
     font-weight: 700;
-    color: #00BFFF;
-    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    left: 0;
+    top: -5px;
 }
 
-.about .content p {
-    color: #ccc;
-}
-
-.about .content ul {
-    list-style: none;
-    padding: 0;
-}
-
-.about .content ul li {
-    padding-bottom: 10px;
+.timeline-content {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    margin-left: 20px;
     position: relative;
 }
 
-.about .content ul i {
-    font-size: 1.2rem;
-    color: #00BFFF;
-    margin-right: 5px;
-}
-
-.about .content ul strong {
+.timeline-content h4 {
+    font-size: 1.25rem;
     color: #fff;
-    font-weight: 600;
-    margin-right: 5px;
+    margin-bottom: 5px;
 }
 
-.about .img-fluid {
-    width: 100%;
+.timeline-content p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.timeline-images {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.timeline-images img {
+    max-width: 50%;
     height: auto;
-    max-width: 400px;
-    margin: 0 auto;
-    display: block;
+    border-radius: 6px;
+    object-fit: cover;
 }
 
-@media (max-width: 991px) {
-    .about .content {
-        margin-top: 20px;
+/* Responsive styles for images on small screens */
+@media (max-width: 576px) {
+    .timeline-images {
+        flex-direction: column;
+    }
+
+    .timeline-images img {
+        max-width: 100%;
     }
 }
