@@ -4,11 +4,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tomasz Gajda - Developer Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">TZ</div>
+        <ul class="nav-links">
+            <li>
+                <!-- เพลงเล่นทันทีแบบ muted -->
+                <audio id="bgm" autoplay muted loop>
+                    <source src="audio/That you body.mp3" type="audio/mpeg">
+                </audio>
+                <!-- ปุ่มสลับเสียง -->
+                <button id="soundBtn" onclick="toggleSound()">🔒</button>
+            </li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact" class="contact-btn">CONTACT ME</a></li>
+        </ul>
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
 
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <button class="close-btn" onclick="toggleMobileMenu()">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#about" onclick="toggleMobileMenu()">About me</a>
+        <a href="#skills" onclick="toggleMobileMenu()">Skills</a>
+        <a href="#contact" onclick="toggleMobileMenu()">CONTACT ME</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-left">
+            <div class="intro-text">
+                <h2>Hi, I am</h2>
+                <h1>Thanatchon </h1>
+                <h1>Zirinawaranoent</h1>
+                <p class="subtitle">Front-end Developer / UI Designer</p>
+                <div class="social-links">
+                    <a href="mailto:tanatchon_ph@cmu.ac.th"
+                        onclick="this.href=this.href.replace('at','@').replace('dot','.')"><i
+                            class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/Thanatchon-DII"><i class="fab fa-github"></i></a>
+                    <a href="https://www.facebook.com/Thanatchon.Zirinawaranoent/"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="diagonal-divider"></div>
+        <div class="hero-right">
+            <div class="profile-image">
+                <img src="img/image.png" alt="Profile">
+                <div class="placeholder-text">
+                    Meus amor semper erit sic<br>
+                    Ad Astra Per Aspera --> Sic Itur Ad Astra🌠<br>
+                    I love you to the 🌙 and back<br>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="about-content">
+            <div>
+                <h2 class="about-title animate-on-scroll">IT BERRIES</h2>
+            </div>
+            <div>
+                <p class="about-text animate-on-scroll">
+                    Nulla in velit a metus rhoncus tempus. Nulla congue nulla vel sem varius finibus. Sed ornare sit
+                    amet lorem sed viverra. In vel urna quis libero viverra facilisis ut ac est. Morbi commodo, eros in
+                    dignissim tempus, tellus odio rutrum augue ut tempor sem magna quis tellus. Etiam enim orci,
+                    suscipit eu semper a, dictum sit amet elit. Nunc quis est eget enim gravida facilisis. Pellentesque
+                    laoreet varius turpis vel pharetra.
+                </p>
+                <p class="about-text animate-on-scroll">
+                    Ut ante justo, consequat vitae elementum tempor, accumsan nec eros. Sed ornare sit amet lorem sed
+                    viverra. In vel urna quis libero viverra facilisis ut ac est.
+                </p>
+                <a href="#" class="read-more-btn animate-on-scroll">READ MORE</a>
+            </div>
+        </div>
+        <div class="geometric-bg"></div>
+    </section>
+
+    <script>
+
+        function toggleSound() {
+            const audio = document.getElementById('bgm');
+            const btn = document.getElementById('soundBtn');
+
+            if (audio.muted) {
+                audio.muted = false; // เปิดเสียง
+                btn.textContent = "💪";
+            } else {
+                audio.muted = true; // ปิดเสียง
+                btn.textContent = "🔇";
+            }
+        }
+
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('active');
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animate-on-scroll class
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Navbar background change on scroll - removed automatic background change
+        // The navbar will remain transparent throughout
+
+        // Add parallax effect to geometric background
+        window.addEventListener('scroll', () => {
+            const geometric = document.querySelector('.geometric-bg');
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.5;
+            geometric.style.transform = `translateY(${rate}px) rotate(45deg)`;
+        });
+    </script>
 </body>
 
 </html>
