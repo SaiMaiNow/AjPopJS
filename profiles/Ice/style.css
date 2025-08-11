@@ -21,7 +21,7 @@ header {
     padding: 20px;
     color: #ffffff;
     box-sizing: border-box; /* ป้องกัน padding ทำให้กว้างเกิน */
-    box-shadow: 5px 1px 18px #2862ff;
+     box-shadow: 5px 1px 18px #2862ff; 
 }
 
 nav {
@@ -45,4 +45,17 @@ p {
 
 main {
     padding-top: 20px; 
+}
+
+section {
+
+    height: 100vh; /* ให้ section มีความสูงเต็มหน้าจอ */
+
+    width: 100%;
+    background: linear-gradient(
+        to bottom left, 
+        #06072C,  /* สีเริ่ม */
+        #2F36C9   /* สีปลาย */
+    );
+
 }
