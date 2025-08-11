@@ -9,6 +9,7 @@ body {
     padding: 10px 0;
 }
 
+/* Desktop */
 @media (min-width: 992px) {
     .header .navmenu ul {
         list-style: none;
@@ -28,34 +29,35 @@ body {
 
     .header .navmenu a.active,
     .header .navmenu a:hover {
-        color: #00BFFF; 
+        color: #00BFFF;
     }
 
     .header .mobile-nav-toggle,
     .header .mobile-nav-close {
-        display: none !important;
+        display: none;
     }
 }
 
+/* Mobile */
 @media (max-width: 991px) {
     .header .navmenu {
         position: fixed;
         top: 0;
-        left: -80%; 
-        width: 80%; 
+        right: -80%; /* เมนูเริ่มอยู่ทางขวาของหน้าจอ */
+        width: 80%;
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.9);
-        transition: left 0.3s ease-in-out;
+        transition: right 0.3s ease-in-out; /* ใช้ right เพื่อเลื่อนจากขวา */
         z-index: 1000;
         padding: 20px;
         display: flex;
         flex-direction: column;
     }
-    
-    .header .navmenu.mobile-nav-active {
-        left: 0;
+
+    body.mobile-nav-active .navmenu {
+        right: 0; /* เมนูเลื่อนมาอยู่ที่ขวาสุด */
     }
-    
+
     .header .navmenu ul {
         list-style: none;
         margin: 0;
@@ -74,22 +76,22 @@ body {
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         transition: color 0.3s;
     }
-    
+
     .header .navmenu a.active,
     .header .navmenu a:hover {
         color: #00BFFF;
     }
 
     .header .mobile-nav-toggle {
-        display: block !important;
+        display: block;
         font-size: 24px;
         cursor: pointer;
         color: #fff;
         z-index: 1001;
     }
-    
+
     .header .mobile-nav-close {
-        display: block !important;
+        display: block;
         font-size: 24px;
         position: absolute;
         top: 20px;
@@ -97,7 +99,7 @@ body {
         cursor: pointer;
         color: #fff;
     }
-    
+
     .mobile-nav-overlay {
         position: fixed;
         top: 0;
@@ -106,28 +108,32 @@ body {
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.7);
         z-index: 999;
-        display: none;
-        transition: opacity 0.3s ease-in-out;
         opacity: 0;
+        visibility: hidden;
+        transition: visibility 0s 0.3s, opacity 0.3s ease-in-out;
     }
-    
-    .mobile-nav-active .mobile-nav-overlay {
-        display: block;
+
+    body.mobile-nav-active .mobile-nav-overlay {
+        visibility: visible;
         opacity: 1;
+        transition: opacity 0.3s ease-in-out;
     }
-    
-    .mobile-nav-active body {
+
+    body.mobile-nav-active {
         overflow: hidden;
     }
-}
 
+    body.mobile-nav-active .mobile-nav-toggle {
+        visibility: hidden;
+    }
+}
 
 .hero {
     position: relative;
     height: 100vh;
     overflow: hidden;
     color: #fff;
-    padding-top: 100px; 
+    padding-top: 100px;
 }
 
 .hero-bg {
