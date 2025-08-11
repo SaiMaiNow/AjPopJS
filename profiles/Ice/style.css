@@ -37,25 +37,43 @@ nav a {
     font-size: 0.5em;
 }
 
-p {
+p.Name {
     font-size: 0.5em;
     margin: 0;
      padding: 10px 15px;
 }
 
 main {
-    padding-top: 20px; 
+    display: flex;
+    padding-top: 40px; 
 }
 
-section {
+section.profile {
+
 
     height: 100vh; /* ให้ section มีความสูงเต็มหน้าจอ */
 
-    width: 100%;
+    width: 60%;
     background: linear-gradient(
         to bottom left, 
         #06072C,  /* สีเริ่ม */
+        #1A1F6B,  /* สีกลาง */
         #2F36C9   /* สีปลาย */
     );
 
+}
+section.content {
+    width: 40%;
+    padding: 20px;
+    color: #ffffff;
+    font-size: 0.5em;
+    line-height: 1.5;
+}
+
+p {
+    color: #ffffff;
+    font-size: 0.3em;
+    line-height: 1.5;
+    padding: 20px;
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
 }
