@@ -5,6 +5,10 @@
   font-family: 'Poppins', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 @keyframes textShadowPulse {
 
@@ -236,7 +240,7 @@ h2.logo {
   /* กึ่งกลางแนวตั้ง */
   align-items: center;
   /* กึ่งกลางแนวนอน */
-  gap: 15px;
+  gap: 25px;
   z-index: 3000;
   pointer-events: none;
   opacity: 0;
@@ -839,7 +843,7 @@ section.content {
   text-align: center;
     scroll-margin-top: 120px;
   animation: gradientMove 7s ease-in-out infinite;
-  height: 100vh;
+  height: 80vh;
 
 }
 
@@ -911,15 +915,29 @@ section.content {
   transform: translateY(-3px);
 }
 
-.contact {
-  background: linear-gradient(135deg, #06072C, #010320);
-  padding: 60px 20px;
-      scroll-margin-top: 120px;
-  animation: gradientMove 7s ease-in-out infinite;
-  height: 100vh;
-  color: #ffffff;
 
+.contact {
+  background-color: #000003;
+  position: relative;
+  padding: 60px 20px;
+  height: 80vh;
+  color: #ffffff;
+  overflow: hidden; 
+  scroll-margin-top: 120px;
+  box-shadow: 0 0 20px 5px #1466ff; /* Glow สีเขียวนีออน */
+  border-radius: 15px;
+
+  /* ลายพื้นหลังแบบเส้นทแยงซ้ำๆ */
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.05) 0,
+    rgba(255, 255, 255, 0.05) 5px,
+    transparent 5px,
+    transparent 20px
+  );
 }
+
+
 
 .contact .container {
   max-width: 800px;
@@ -1059,6 +1077,9 @@ section.content {
     max-width: 80%; /* ให้รูปเล็กลงนิดนึง */
   }
 
+  .about{
+    margin-bottom: 80vh;
+  }
   
 
  .about-wrapper {
@@ -1102,7 +1123,7 @@ section.content {
   }
 
   .skill{
-    height: 200vh;
+    margin-top: 100vh;
   }
 
   
