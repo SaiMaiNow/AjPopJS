@@ -251,10 +251,10 @@ body {
 
 .timeline-date {
     position: absolute;
-    left: 0;
+    left: -5px;
     top: 0;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -262,51 +262,100 @@ body {
     color: #fff;
     border-radius: 50%;
     font-weight: 700;
-    font-size: 0.9rem;
-    left: 0;
-    top: -5px;
+    font-size: 1rem;
+    z-index: 2;
+}
+
+/* เพิ่มโค้ดใหม่นี้เพื่อซ่อนวงกลมเมื่อไม่มีเนื้อหา */
+.timeline-item .empty-date {
+    display: none;
+}
+
+/* ปรับตำแหน่งของเส้นและรายการใหม่เมื่อไม่มีวงกลม */
+.timeline-item .empty-date + .timeline-content {
+    margin-top: 0;
+}
+
+.timeline-images {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center; 
+}
+
+.timeline-images img {
+    width: 250px;
+    height: 250px;
+    border-radius: 6px;
+    object-fit: cover;
 }
 
 .timeline-content {
     background-color: #222;
     padding: 20px;
     border-radius: 8px;
-    margin-left: 20px;
-    position: relative;
+    min-width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .timeline-content h4 {
+    font-weight: bold;
     font-size: 1.25rem;
-    color: #fff;
-    margin-bottom: 5px;
+    color: #00BFFF;
+    margin-bottom: 10px;
 }
 
 .timeline-content p {
     font-size: 1rem;
     color: #ccc;
-    margin-bottom: 15px;
+    margin-bottom: 0;
 }
 
-.timeline-images {
-    display: flex;
-    gap: 10px;
-    margin-top: 15px;
+.timeline-content ul{
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 0;
+    font-weight: bold;
 }
 
-.timeline-images img {
-    max-width: 50%;
-    height: auto;
-    border-radius: 6px;
-    object-fit: cover;
+@media (max-width: 768px) {
+    .timeline-date {
+        position: static; 
+        margin-bottom: 15px;
 }
 
-/* Responsive styles for images on small screens */
-@media (max-width: 576px) {
-    .timeline-images {
+.timeline-item {
         flex-direction: column;
+         align-items: center;
+         padding-left: 0; 
+}
+    
+    .timeline::before {
+        left: 50%; /* จัดเส้นกลาง */
+        transform: translateX(-50%);
+    }
+
+    .timeline-item::before {
+        display: none; /* ซ่อนวงกลมเล็กๆ */
+    }
+
+    .timeline-images {
+        flex-direction: column; 
+        align-items: center;
     }
 
     .timeline-images img {
-        max-width: 100%;
+        width: 150px;
+        height: 150px;
+        margin-bottom: 10px;
+    }
+
+    .timeline-content {
+        min-width: 100%;
+        margin-left: 0;
     }
 }
