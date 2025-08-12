@@ -1,79 +1,523 @@
-body {
-    margin: 0; /* ลบ margin เริ่มต้นของ browser */
+* {
+    margin: 0;
     padding: 0;
-    background-color: #06072C;
-     font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+@keyframes textShadowPulse {
+    0%, 100% {
+        text-shadow:
+            0 0 10px #2862ff,
+            0 0 20px #2862ff;
+    }
+    50% {
+        text-shadow:
+            0 0 20px #7da7ff,
+            0 0 40px #6799fd,
+            0 0 60px #3b7cff;
+    }
+}
+
+h2.logo {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #ffffff;
+    letter-spacing: -0.15em;
+    user-select: none;
+    animation: textShadowPulse 2s infinite ease-in-out;
+    /* text-shadow: 0 0 10px #2862ff, 0 0 20px #2862ff; */
+    transform: rotate(180deg);  /* กลับหัวข้อความ */
 }
 
 
-header {
-    position: fixed; /* ให้ติดบนสุดเวลา scroll */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 20px; /* กำหนดความสูงของ header */
+/* ซ่อนโลโก้มือถือโดยดีฟอลต์ */
+.logo-mobile {
+  display: none;
+      font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #ffffff;
+    letter-spacing: -0.15em;
+    user-select: none;
+    animation: textShadowPulse 2s infinite ease-in-out;
+    /* text-shadow: 0 0 10px #2862ff, 0 0 20px #2862ff; */
+    transform: rotate(180deg);  /* กลับหัวข้อความ */
+}
+
+
+@keyframes shadowPulse {
+    0%, 100% {
+        box-shadow: 5px 1px 18px rgba(40, 98, 255, 0.7);
+    }
+    50% {
+        box-shadow: 8px 2px 25px rgba(40, 98, 255, 1);
+    }
+}
+
+.navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 28px;
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    height: 60px; /* กำหนดความสูง */
+    padding: 10px 0;
     background-color: #06072C;
-    padding: 20px;
-    color: #ffffff;
-    box-sizing: border-box; /* ป้องกัน padding ทำให้กว้างเกิน */
-     box-shadow: 5px 1px 18px #2862ff; 
+    animation: shadowPulse 2s infinite ease-in-out;
+    z-index: 1001;
+    /* box-shadow: 5px 1px 18px rgba(40, 98, 255, 0.7); */
+    /* background: rgba(173, 169, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;     */
+    /* background: linear-gradient(
+        to bottom left, 
+        #06072C,  
+        #1A1F6B,  
+        #2F36C9   
+    ); */
 }
 
-nav {
-    padding: 15px;
-    
-
-}
-
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 10px 15px;
-    font-size: 0.5em;
-}
-
-p.Name {
-    font-size: 0.5em;
-    margin: 0;
-     padding: 10px 15px;
-}
-
-main {
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
     display: flex;
-    padding-top: 40px; 
+    justify-content: space-between; /* กระจายซ้าย-กลาง-ขวา */
+    align-items: center;     /* จัดแนวตั้งให้อยู่กลาง */
+    width: 100%; /* เต็มความกว้าง */
+    padding: 0 20px;  /* <-- เพิ่ม padding ซ้ายขวา */
 }
+
+@keyframes neonPulse {
+    0% {
+        color: rgba(0, 255, 255, 0.8);  /* สีฟ้าอมเขียว */
+        text-shadow:
+            0 0 5px rgba(0, 255, 255, 0.8),
+            0 0 10px rgba(0, 255, 255, 0.8),
+            0 0 20px rgba(0, 255, 255, 0.8),
+            0 0 40px rgba(0, 255, 255, 0.8);
+    }
+    50% {
+        color: rgba(255, 255, 255, 0.9); /* สีชมพูสด */
+        text-shadow:
+            0 0 10px #ffffffe6,
+            0 0 20px #ffffffe6,
+            0 0 30px #ffffffe6,
+            0 0 50px rgba(255, 255, 255, 0.9);
+    }
+    100% {
+        color: rgba(0, 255, 0, 0.9);    /* สีเขียวมะนาว */
+        text-shadow:
+            0 0 5px rgba(0, 255, 0, 0.9),
+            0 0 10px rgba(0, 255, 0, 0.9),
+            0 0 20px rgba(0, 255, 0, 0.9),
+            0 0 40px rgba(0, 255, 0, 0.9);
+    }
+}
+
+/* ปุ่มเปิดเสียง ด้านซ้าย */
+.sound-toggle {
+    background: transparent;  /* ลบพื้นหลัง */
+    border: none;             /* ลบเส้นขอบ */
+    padding: 0;               /* ลดช่องว่าง */
+    outline: none;            /* ลบเส้นขอบเวลาโฟกัส */
+
+    color: #ffffff;
+    font-size: 1.0rem;
+    cursor: pointer;
+    margin-left: 20px;
+    color: #161ccb;
+}
+
+/* hamburger menu ด้านขวา */
+.mobile-menu-toggle {
+    display: flex;  /* แสดงตลอดเวลา */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 10px;
+    cursor: pointer;
+    animation: textShadowPulse 2s infinite ease-in-out;
+    margin-right: 20px; /* เว้นช่องว่างด้านขวา */
+}
+
+.mobile-menu-toggle .bar {
+    height: 1px;
+    background-color: white;
+    border-radius: 2px;
+    margin-bottom: 4px;
+    width: 30px;
+}
+
+.mobile-menu-toggle .bar:last-child {
+    margin-bottom: 0;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 0 auto; /* กึ่งกลางในพื้นที่ที่เหลือ */
+    padding: 0;
+}
+.sound-toggle.playing i {
+  animation: neonPulse 2.5s infinite ease-in-out;
+}
+
+.mobile-menu-close{
+    background: transparent;  /* ลบพื้นหลัง */
+    border: none;             /* ลบเส้นขอบ */
+    padding: 0;               /* ลดช่องว่าง */
+    outline: none;            /* ลบเส้นขอบเวลาโฟกัส */
+
+    color: #ffffff;
+    font-size: 2.0rem;
+    cursor: pointer;
+     text-shadow: 0 0 10px #2862ff, 0 0 20px #2862ff;
+
+}
+
+/* เมนูมือถือแบบ fullscreen overlay ซ่อนโดยดีฟอลต์ */
+.nav-mobile {
+    list-style: none;
+  display: none;
+  position: fixed; /* fixed เพื่อให้ลอยบน viewport ตลอด */
+  top: 0;
+  left: 0;
+  width: 100vw;  /* เต็มความกว้าง */
+  height: 100vh; /* เต็มความสูง */
+  background-color: rgba(0, 0, 0, 0.8); /* พื้นหลังดำโปร่งแสง */
+  flex-direction: column;
+  justify-content: center; /* กึ่งกลางแนวตั้ง */
+  align-items: center;     /* กึ่งกลางแนวนอน */
+  gap: 30px;
+  z-index: 3000;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* เมื่อเมนูมือถือเปิด */
+.nav-mobile.active {
+  display: flex;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+/* ตัวลิงก์เมนูให้ใหญ่ขึ้นสำหรับมือถือ */
+.nav-mobile .nav-link {
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 0 0 10px #2862ff, 0 0 20px #2862ff;
+}
+
+/* ปุ่ม hamburger อยู่บนสุด */
+.mobile-menu-toggle {
+  position: relative;
+  z-index: 3100;
+}
+
+
+
+.nav-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.7rem;
+    transition: color 0.3s;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #007bff;
+    text-shadow: 0 0 10px #2862ff, 0 0 20px #2862ff;
+}
+
+/* เส้นใต้เริ่มซ่อนด้วย scaleX(0) */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: 1px;
+    background-color: #007bff; /* สีเส้น */
+    transition: transform 0.3s ease;
+    text-shadow: 0 0 10px #2862ff, 0 0 20px #2862ff;
+}
+
+
+/* เวลา hover เส้นขยายจากกลางไปสุด */
+.nav-link:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    position: relative; /* เพื่อให้ใช้ ::after */
+    text-shadow: 0 0 10px #2862ff, 0 0 20px #2862ff;
+}
+
+.mobile-menu-toggle {
+    display: flex;
+}
+
+/* ทำให้ M ใหญ่และชัด */
+.nav-menu h2.logo {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.mobile-menu-toggle {
+  position: relative;
+  z-index: 2100; /* มากกว่า nav-mobile เล็กน้อย */
+}
+
+/* สำหรับจอเล็ก */
+@media (max-width: 768px) {
+    .logo-mobile{
+        display: flex;
+    }
+
+    .nav-container {
+        justify-content: space-between;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+      .nav-mobile {
+    display: block;  /* แสดงโลโก้มือถือ */
+      }
+    .nav-mobile {
+    display: none;
+    flex-direction: column;
+  }
+  .nav-mobile.active {
+    display: flex;
+    pointer-events: auto;
+  }
+}
+
+
+
+/* Main Layout */
 
 section.profile {
+  display: flex;
+      scroll-margin-top: 60px; /* เว้นระยะเมื่อ scroll ถึง section */
+      z-index: 1000;
+  flex-wrap: wrap;           /* เวลาหน้าจอเล็กจะจัดใหม่ */
+  justify-content: center;   /* กึ่งกลางแนวนอน */
+  align-items: center;       /* จัดกลางแนวตั้ง */
+  min-height: calc(100vh - 60px);
+  padding: 20px;
+    background: linear-gradient(45deg, #06072C, #000000, #010459, #06072C, #06072C);
+  color: white;
+  gap: 40px;                 /* เว้นระยะระหว่าง intro กับ รูป */
+  margin-top: 60px;          /* เว้นระยะจาก navbar */
+  animation: gradientMove 15s ease-in-out infinite;
+    background-size: 200% 200%;  /* เพิ่มขนาดพื้นหลังให้ใหญ่กว่าพื้นที่ เพื่อให้เคลื่อนที่ */
+  background-repeat: no-repeat;
+
+}
+
+/* แอนิเมชันให้ gradient เคลื่อน */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+section.profile .intro h2,
+section.profile .intro h1,
+section.profile .intro p {
+  margin-bottom: 15px;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+/* แอนิเมชัน fade-in ทีละบรรทัด */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
-    height: 100vh; /* ให้ section มีความสูงเต็มหน้าจอ */
+section.profile .intro {
+  flex: 1 1 300px;           /* ยืดหยุ่น ครึ่งหนึ่งขั้นต่ำ 300px */
+  max-width: 500px;
+  margin-left: 60px;
+    animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
 
+section.profile .intro h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+    animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.8s;
+    text-shadow: 0 0 5px #2890ff, 0 0 10px #28b4ff;
+}
+
+section.profile .intro h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+    animation: fadeInUp 1s ease forwards;
+  animation-delay: 1.0s;
+  text-shadow: 0 0 5px #2890ff, 0 0 10px #28b4ff;
+}
+
+section.profile .intro p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #89dfff;
+  text-shadow: 0 0 5px #2890ff, 0 0 10px #28b4ff;
+      animation: fadeInUp 1s ease forwards;
+  animation-delay: 1.3s;
+}
+
+section.profile .social-links a {
+  color: white;
+  margin-right: 15px;
+  font-size: 1.5rem;
+  transition: color 1.3s;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* กำหนด delay ทีละไอคอน */
+section.profile .social-links a:nth-child(1) {
+  animation-delay: 1.6s;
+}
+section.profile .social-links a:nth-child(2) {
+  animation-delay: 1.8s;
+}
+section.profile .social-links a:nth-child(3) {
+  animation-delay: 2.0s;
+}
+
+
+
+
+section.profile .social-links a:hover {
+  color: #007bff;
+    animation: textShadowPulse 2s infinite ease-in-out;
+}
+
+section.profile .profile {
+  flex: 1 1 250px;           /* ยืดหยุ่น ครึ่งหนึ่งขั้นต่ำ 250px */
+  max-width: 350px;
+  text-align: center;
+}
+
+section.profile .profile img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+section.profile .quote {
+     font-family: 'Raleway', sans-serif;
+  color: #f2f2f2;
+   text-shadow: 0 0 10px #2890ff, 0 0 20px #28b4ff;
+}
+
+section.profile .quote h5 {
+  font-size: 0.8rem;
+  color: #fffde1;
+  margin-bottom: 0.3rem;
+  font-style: normal; /* ไม่เอา italic ให้หัวข้อดูชัด */
+      text-shadow: 0 0 10px #2890ff, 0 0 20px #28b4ff;
+}
+
+section.profile .quote p {
+  font-size: 0.6rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.profile-image{
+    height: 260px;
+      width: auto;      /* ให้ความกว้างปรับตามอัตราส่วน */
+  max-width: 100%;  /* ไม่เกินขนาด container */
+  object-fit: cover; /* ตัดขอบภาพให้เต็มพื้นที่ */
+}
+
+/* ปรับสำหรับมือถือ */
+@media (max-width: 768px) {
+  section.profile {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  section.profile .intro,
+  section.profile .profile {
+    max-width: 100%;
+  }
+  section.profile .intro {
+
+  margin-left: 0px;
+}
+.profile-image{
+height: auto;
+
+    
+}
+
+
+
+}
+
+section.about {
+    height: calc(100vh - 60px);
+    background-color: #ffffff;
+    color: white;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* section.profile {
     width: 60%;
     background: linear-gradient(
         to bottom left, 
-        #06072C,  /* สีเริ่ม */
-        #1A1F6B,  /* สีกลาง */
-        #2F36C9   /* สีปลาย */
+        #06072C,  
+        #1A1F6B,  
+        #2F36C9   
     );
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 section.content {
     width: 40%;
-    padding: 20px;
-    color: #ffffff;
-    font-size: 0.5em;
-    line-height: 1.5;
-}
-
-p {
-    color: #ffffff;
-    font-size: 0.3em;
-    line-height: 1.5;
-    padding: 20px;
-    text-align: center; /* จัดข้อความให้อยู่กลาง */
-}
+    padding: 40px;
+    background-color: #0e113f;
+    font-size: 1rem;
+    line-height: 1.6;
+} */

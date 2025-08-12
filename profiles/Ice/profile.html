@@ -1,39 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>My Portfolio</title>
+     <link rel="stylesheet" href="style.css">
+         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+         
+
 </head>
 <body>
-    <header>
-        <p class="Name">Methat</p>
-              <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#project">Project</a>
-        <a href="#contact" class="cta">Contact</a>
-      </nav>
-     
-    </header>
-    <main>
-        <section class="profile">
-            <p style="color: aliceblue;">Profile Page</p>
+    <!-- Navigation -->
+    <nav class="navbar">
+            <div class="nav-container">
+            <button class="sound-toggle" id="soundToggle">
+                <i class="fa-solid fa-music"></i>
+            </button>
+            <audio id="bgMusic" loop>
+                <source src="Music.mp3" type="audio/mpeg" />
+            </audio>
+            
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><h2 class="logo">W</h2></li>
+                <li><a href="#education" class="nav-link">Educ.</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+                            <!-- โลโก้สำหรับมือถือ -->
+                <h2 class="logo logo-mobile">W</h2>
+
+            <div class="mobile-menu-toggle">
+                
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-mobile">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <button class="mobile-menu-close"><h1>X</h1></button>
+            </ul>
+
+        </div>
+    </nav>
+
+
+        <section id="home" class="profile">
+              <div class="intro">
+                <h2>Hi, I am</h2>
+                <h1>Methat Saengavtanarat</h1>
+                <p>Front-end Developer / Ux Designer</p>
+                <div class="social-links">
+                <a href="mailto:tanatchon_ph@cmu.ac.th"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/Methat-i"><i class="fab fa-github"></i></a>
+                <a href="https://www.facebook.com/metha.s.s.ng.wat.hn.ratn?locale=th_TH"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="profile">
+                <img src="P01.png" alt="Profile" class="profile-image">
+                <div class="quote">
+                <h5>College of Arts, Media and Technology</h5>
+                <p>Digital Industry Integration</p>
+                </div>
+
+            </div>
  
         </section>
-        <section class="content">
+        <!-- <section class="content">
             <p>Welcome to My Profile</p>
             <p>This is a simple profile page designed to showcase user information.</p>
             <p>Feel free to explore and learn more about me!</p>
+        </section> -->
+        <section id="about" class="about">
+
+        </section>
+        <section id="education" class="education">
+
+        </section>
+         <section id="contact" class="contact">
+
         </section>
 
 
-    </main>
-    <footer>
-  
-    </footer>
+
+
+
+    <script>
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+const navMobile = document.querySelector('.nav-mobile');
+
+mobileMenuToggle.addEventListener('click', () => {
+  navMobile.classList.toggle('active');
+})
+;const navMobileLinks = document.querySelectorAll('.nav-mobile .nav-link');
+
+navMobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navMobile.classList.remove('active');
+  });
+});
+
+const closeBtn = document.querySelector('.mobile-menu-close');
+closeBtn.addEventListener('click', () => {
+  navMobile.classList.remove('active');
+});
+
+
+
+const audio = document.getElementById('bgMusic');
+const btn = document.getElementById('soundToggle');
+
+btn.addEventListener('click', () => {
+  if (audio.paused) {
+    audio.play();
+    btn.classList.add('playing');  // เพิ่มคลาสเพื่อเปลี่ยนไอคอนถ้าต้องการ
+  } else {
+    audio.pause();
+    btn.classList.remove('playing');
+  }
+});
+
+  // เริ่มเล่นเพลงอัตโนมัติ (ถ้าเบราว์เซอร์อนุญาต)
+  audio.play().catch(() => {
+    // ถ้า autoplay ไม่ได้ ก็รอให้ user กดปุ่ม
+  });
+
+  window.onload = () => {
+  audio.volume = 0.05; // ตั้งเสียงเริ่มต้น 30%
+};
+
+
+// เลือกทุก section ในหน้าเว็บ
+const sections = document.querySelectorAll("section");
+
+// เลือกทุกเมนูที่มี class nav-link
+const navLinks = document.querySelectorAll(".nav-link");
+
+// เพิ่ม event listener ฟังการเลื่อนหน้าเว็บ
+window.addEventListener("scroll", () => {
+  // ตัวแปรเก็บ id ของ section ปัจจุบันที่เลื่อนถึง
+  let current = "";
+
+  // วนลูปเช็คทุก section
+  sections.forEach(section => {
+    // หาตำแหน่งแนวตั้งของ section จากบนสุดหน้าจอ ลบ 70px เพื่อชดเชย navbar
+    const sectionTop = section.offsetTop - 70;
+
+    // ถ้าเลื่อนมาถึงหรือลงไปเกินตำแหน่ง section นี้
+    if (pageYOffset >= sectionTop) {
+      // กำหนด current เป็น id ของ section นี้
+      current = section.getAttribute("id");
+    }
+  });
+
+  // วนลูปลิงก์เมนูทั้งหมด
+  navLinks.forEach(link => {
+    // เอา class active ออกจากลิงก์เมนูทั้งหมดก่อน
+    link.classList.remove("active");
+
+    // ถ้า href ของลิงก์ตรงกับ id ของ section ปัจจุบัน
+    if (link.getAttribute("href") === "#" + current) {
+      // เพิ่ม class active ให้ลิงก์เมนูนั้น
+      link.classList.add("active");
+    }
+  });
+});
+
+    </script>
 </body>
 </html>
