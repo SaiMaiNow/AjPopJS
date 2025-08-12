@@ -1,78 +1,88 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
+
 @keyframes textShadowPulse {
-    0%, 100% {
-        text-shadow:
-            0 0 10px #2862ff,
-            0 0 20px #2862ff;
-    }
-    50% {
-        text-shadow:
-            0 0 20px #7da7ff,
-            0 0 40px #6799fd,
-            0 0 60px #3b7cff;
-    }
+
+  0%,
+  100% {
+    text-shadow:
+      0 0 10px #2862ff,
+      0 0 20px #2862ff;
+  }
+
+  50% {
+    text-shadow:
+      0 0 20px #7da7ff,
+      0 0 40px #6799fd,
+      0 0 60px #3b7cff;
+  }
 }
 
 h2.logo {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 2.5rem;
-    color: #ffffff;
-    letter-spacing: -0.15em;
-    user-select: none;
-    animation: textShadowPulse 2s infinite ease-in-out;
-    /* text-shadow: 0 0 10px #2862ff, 0 0 20px #2862ff; */
-    transform: rotate(180deg);  /* กลับหัวข้อความ */
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #ffffff;
+  letter-spacing: -0.15em;
+  user-select: none;
+  animation: textShadowPulse 2s infinite ease-in-out;
+  /* text-shadow: 0 0 10px #2862ff, 0 0 20px #2862ff; */
+  transform: rotate(180deg);
+  /* กลับหัวข้อความ */
 }
 
 
 /* ซ่อนโลโก้มือถือโดยดีฟอลต์ */
 .logo-mobile {
   display: none;
-      font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 2.5rem;
-    color: #ffffff;
-    letter-spacing: -0.15em;
-    user-select: none;
-    animation: textShadowPulse 2s infinite ease-in-out;
-    /* text-shadow: 0 0 10px #2862ff, 0 0 20px #2862ff; */
-    transform: rotate(180deg);  /* กลับหัวข้อความ */
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 2.0rem;
+  color: #ffffff;
+  letter-spacing: -0.15em;
+  user-select: none;
+  animation: textShadowPulse 2s infinite ease-in-out;
+  /* text-shadow: 0 0 10px #2862ff, 0 0 20px #2862ff; */
+  transform: rotate(180deg);
+  /* กลับหัวข้อความ */
 }
 
 
 @keyframes shadowPulse {
-    0%, 100% {
-        box-shadow: 5px 1px 18px rgba(40, 98, 255, 0.7);
-    }
-    50% {
-        box-shadow: 8px 2px 25px rgba(40, 98, 255, 1);
-    }
+
+  0%,
+  100% {
+    box-shadow: 5px 1px 18px rgba(40, 98, 255, 0.7);
+  }
+
+  50% {
+    box-shadow: 8px 2px 25px rgba(40, 98, 255, 1);
+  }
 }
 
 .navbar {
-    display: flex;
-    align-items: center;
-    position: fixed; 
-    top: 0;
-    width: 100%;
-    height: 60px; /* กำหนดความสูง */
-    padding: 10px 0;
-    background-color: #06072C;
-    animation: shadowPulse 2s infinite ease-in-out;
-    z-index: 1001;
-    /* box-shadow: 5px 1px 18px rgba(40, 98, 255, 0.7); */
-    /* background: rgba(173, 169, 255, 0.1);
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 120px;
+  /* กำหนดความสูง */
+  padding: 10px 0;
+  background-color: #06072C;
+  animation: shadowPulse 2s infinite ease-in-out;
+  z-index: 1001;
+  /* box-shadow: 5px 1px 18px rgba(40, 98, 255, 0.7); */
+  /* background: rgba(173, 169, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     z-index: 1000;     */
-    /* background: linear-gradient(
+  /* background: linear-gradient(
         to bottom left, 
         #06072C,  
         #1A1F6B,  
@@ -81,127 +91,156 @@ h2.logo {
 }
 
 .nav-container {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between; /* กระจายซ้าย-กลาง-ขวา */
-    align-items: center;     /* จัดแนวตั้งให้อยู่กลาง */
-    width: 100%; /* เต็มความกว้าง */
-    padding: 0 20px;  /* <-- เพิ่ม padding ซ้ายขวา */
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  /* กระจายซ้าย-กลาง-ขวา */
+  align-items: center;
+  /* จัดแนวตั้งให้อยู่กลาง */
+  width: 100%;
+  /* เต็มความกว้าง */
+  padding: 0 20px;
+  /* <-- เพิ่ม padding ซ้ายขวา */
 }
 
 @keyframes neonPulse {
-    0% {
-        color: rgba(0, 255, 255, 0.8);  /* สีฟ้าอมเขียว */
-        text-shadow:
-            0 0 5px rgba(0, 255, 255, 0.8),
-            0 0 10px rgba(0, 255, 255, 0.8),
-            0 0 20px rgba(0, 255, 255, 0.8),
-            0 0 40px rgba(0, 255, 255, 0.8);
-    }
-    50% {
-        color: rgba(255, 255, 255, 0.9); /* สีชมพูสด */
-        text-shadow:
-            0 0 10px #ffffffe6,
-            0 0 20px #ffffffe6,
-            0 0 30px #ffffffe6,
-            0 0 50px rgba(255, 255, 255, 0.9);
-    }
-    100% {
-        color: rgba(0, 255, 0, 0.9);    /* สีเขียวมะนาว */
-        text-shadow:
-            0 0 5px rgba(0, 255, 0, 0.9),
-            0 0 10px rgba(0, 255, 0, 0.9),
-            0 0 20px rgba(0, 255, 0, 0.9),
-            0 0 40px rgba(0, 255, 0, 0.9);
-    }
+  0% {
+    color: rgba(0, 255, 255, 0.8);
+    /* สีฟ้าอมเขียว */
+    text-shadow:
+      0 0 5px rgba(0, 255, 255, 0.8),
+      0 0 10px rgba(0, 255, 255, 0.8),
+      0 0 20px rgba(0, 255, 255, 0.8),
+      0 0 40px rgba(0, 255, 255, 0.8);
+  }
+
+  50% {
+    color: rgba(255, 255, 255, 0.9);
+    /* สีชมพูสด */
+    text-shadow:
+      0 0 10px #ffffffe6,
+      0 0 20px #ffffffe6,
+      0 0 30px #ffffffe6,
+      0 0 50px rgba(255, 255, 255, 0.9);
+  }
+
+  100% {
+    color: rgba(0, 255, 0, 0.9);
+    /* สีเขียวมะนาว */
+    text-shadow:
+      0 0 5px rgba(0, 255, 0, 0.9),
+      0 0 10px rgba(0, 255, 0, 0.9),
+      0 0 20px rgba(0, 255, 0, 0.9),
+      0 0 40px rgba(0, 255, 0, 0.9);
+  }
 }
 
 /* ปุ่มเปิดเสียง ด้านซ้าย */
 .sound-toggle {
-    background: transparent;  /* ลบพื้นหลัง */
-    border: none;             /* ลบเส้นขอบ */
-    padding: 0;               /* ลดช่องว่าง */
-    outline: none;            /* ลบเส้นขอบเวลาโฟกัส */
+  background: transparent;
+  /* ลบพื้นหลัง */
+  border: none;
+  /* ลบเส้นขอบ */
+  padding: 0;
+  /* ลดช่องว่าง */
+  outline: none;
+  /* ลบเส้นขอบเวลาโฟกัส */
 
-    color: #ffffff;
-    font-size: 1.0rem;
-    cursor: pointer;
-    margin-left: 20px;
-    color: #161ccb;
+  color: #ffffff;
+  font-size: 2.2rem;
+  cursor: pointer;
+  margin-left: 20px;
+  color: #262ec3;
 }
 
 /* hamburger menu ด้านขวา */
 .mobile-menu-toggle {
-    display: flex;  /* แสดงตลอดเวลา */
-    flex-direction: column;
-    justify-content: space-between;
-    width: 25px;
-    height: 10px;
-    cursor: pointer;
-    animation: textShadowPulse 2s infinite ease-in-out;
-    margin-right: 20px; /* เว้นช่องว่างด้านขวา */
+  display: flex;
+  /* แสดงตลอดเวลา */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 30px;
+  cursor: pointer;
+  animation: textShadowPulse 2s infinite ease-in-out;
+  margin-right: 20px;
+  /* เว้นช่องว่างด้านขวา */
+  font-size: 2rem;
 }
 
 .mobile-menu-toggle .bar {
-    height: 1px;
-    background-color: white;
-    border-radius: 2px;
-    margin-bottom: 4px;
-    width: 30px;
+  height: 1px;
+  background-color: white;
+  border-radius: 2px;
+  margin-bottom: 4px;
+  width: 30px;
 }
 
 .mobile-menu-toggle .bar:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    margin: 0 auto; /* กึ่งกลางในพื้นที่ที่เหลือ */
-    padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin: 0 auto;
+  /* กึ่งกลางในพื้นที่ที่เหลือ */
+  padding: 0;
 }
+
 .sound-toggle.playing i {
   animation: neonPulse 2.5s infinite ease-in-out;
 }
 
-.mobile-menu-close{
-    background: transparent;  /* ลบพื้นหลัง */
-    border: none;             /* ลบเส้นขอบ */
-    padding: 0;               /* ลดช่องว่าง */
-    outline: none;            /* ลบเส้นขอบเวลาโฟกัส */
+.mobile-menu-close {
+  background: transparent;
+  /* ลบพื้นหลัง */
+  border: none;
+  /* ลบเส้นขอบ */
+  padding: 0;
+  /* ลดช่องว่าง */
+  outline: none;
+  /* ลบเส้นขอบเวลาโฟกัส */
 
-    color: #ff3434;
-    font-size: 2.0rem;
-    cursor: pointer;
-     text-shadow: 0 0 10px #2862ff, 0 0 20px #2862ff;
+  color: #ff3434;
+  font-size: 2.5rem;
+  cursor: pointer;
+  text-shadow: 0 0 10px #2862ff, 0 0 20px #2862ff;
 
 }
 
 .mobile-menu-close:hover {
-    color: #ff3434;
+  color: #ff3434;
   transform: rotate(90deg);
 }
 
 /* เมนูมือถือแบบ fullscreen overlay ซ่อนโดยดีฟอลต์ */
 .nav-mobile {
-    list-style: none;
+  list-style: none;
   display: none;
-  position: fixed; /* fixed เพื่อให้ลอยบน viewport ตลอด */
+  position: fixed;
+  /* fixed เพื่อให้ลอยบน viewport ตลอด */
   top: 0;
   left: 0;
-  width: 100vw;  /* เต็มความกว้าง */
-  height: 100vh; /* เต็มความสูง */
-  background-color: rgba(0, 0, 0, 0.8); /* พื้นหลังดำโปร่งแสง */
+  width: 100vw;
+  /* เต็มความกว้าง */
+  height: 100vh;
+  /* เต็มความสูง */
+  background-color: rgba(0, 0, 0, 0.8);
+  /* พื้นหลังดำโปร่งแสง */
   flex-direction: column;
-  justify-content: center; /* กึ่งกลางแนวตั้ง */
-  align-items: center;     /* กึ่งกลางแนวนอน */
-  gap: 30px;
+  justify-content: center;
+  /* กึ่งกลางแนวตั้ง */
+  align-items: center;
+  /* กึ่งกลางแนวนอน */
+  gap: 15px;
   z-index: 3000;
   pointer-events: none;
   opacity: 0;
+  font-size: 0.5rem;
   transition: opacity 0.3s ease;
 }
 
@@ -228,92 +267,66 @@ h2.logo {
 
 
 .nav-link {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 0.7rem;
-    transition: color 0.3s;
-    position: relative;
-    padding: 5px 0;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.8rem;
+  transition: color 0.3s;
+  position: relative;
+  padding: 20px;
+  transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #007bff;
-    text-shadow: 0 0 10px #2862ff, 0 0 20px #2862ff;
+  color: #007bff;
+  text-shadow: 0 0 10px #2862ff, 0 0 20px #2862ff;
 }
 
 /* เส้นใต้เริ่มซ่อนด้วย scaleX(0) */
 .nav-link::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%) scaleX(0);
-    transform-origin: center;
-    width: 100%;
-    height: 1px;
-    background-color: #007bff; /* สีเส้น */
-    transition: transform 0.3s ease;
-    text-shadow: 0 0 10px #2862ff, 0 0 20px #2862ff;
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: 1px;
+  background-color: #007bff;
+  /* สีเส้น */
+  transition: transform 0.3s ease;
+  text-shadow: 0 0 10px #2862ff, 0 0 20px #2862ff;
 }
 
 
 /* เวลา hover เส้นขยายจากกลางไปสุด */
 .nav-link:hover::after {
-    transform: translateX(-50%) scaleX(1);
+  transform: translateX(-50%) scaleX(1);
 }
 
 .nav-link:hover,
 .nav-link.active {
-    position: relative; /* เพื่อให้ใช้ ::after */
-    text-shadow: 0 0 10px #2862ff, 0 0 20px #2862ff;
+  position: relative;
+  /* เพื่อให้ใช้ ::after */
+  text-shadow: 0 0 10px #2862ff, 0 0 20px #2862ff;
 }
 
 .mobile-menu-toggle {
-    display: flex;
+  display: flex;
 }
 
 /* ทำให้ M ใหญ่และชัด */
 .nav-menu h2.logo {
-    margin: 0;
-    font-size: 2rem;
+  margin: 0;
+  font-size: 4.5rem;
 }
 
 .mobile-menu-toggle {
   position: relative;
-  z-index: 2100; /* มากกว่า nav-mobile เล็กน้อย */
+  z-index: 2100;
+  /* มากกว่า nav-mobile เล็กน้อย */
 }
 
-/* สำหรับจอเล็ก */
-@media (max-width: 768px) {
-    .logo-mobile{
-        display: flex;
-    }
 
-    .nav-container {
-        justify-content: space-between;
-    }
-
-    .nav-menu {
-        display: none;
-        flex-direction: column;
-    }
-
-    .mobile-menu-toggle {
-        display: flex;
-    }
-      .nav-mobile {
-    display: block;  /* แสดงโลโก้มือถือ */
-      }
-    .nav-mobile {
-    display: none;
-    flex-direction: column;
-  }
-  .nav-mobile.active {
-    display: flex;
-    pointer-events: auto;
-  }
-}
 
 
 
@@ -321,19 +334,19 @@ h2.logo {
 
 section.profile {
   display: flex;
-      scroll-margin-top: 60px; /* เว้นระยะเมื่อ scroll ถึง section */
-      z-index: 1000;
-  flex-wrap: wrap;           /* เวลาหน้าจอเล็กจะจัดใหม่ */
-  justify-content: center;   /* กึ่งกลางแนวนอน */
-  align-items: center;       /* จัดกลางแนวตั้ง */
-  min-height: calc(100vh - 60px);
-  padding: 20px;
-    background: linear-gradient(45deg, #06072C, #000000, #010459, #06072C, #06072C);
+  justify-content: center; /* จัดตรงกลางแนวนอน */
+  align-items: center; /* จัดตรงกลางแนวตั้ง */
+  flex-wrap: wrap; /* ให้ซ้อนกันเมื่อจอเล็ก */
+  gap: 100px; /* ระยะห่างระหว่างข้อความกับรูป */
+  scroll-margin-top: 120px;
+  z-index: 1000;
+  min-height: calc(100vh - 120px);
+  padding: 20px 0;
+  background: linear-gradient(45deg, #06072C, #000000, #010459, #06072C, #06072C);
   color: white;
-  gap: 40px;                 /* เว้นระยะระหว่าง intro กับ รูป */
-  margin-top: 60px;          /* เว้นระยะจาก navbar */
+  margin-top: 120px;
   animation: gradientMove 15s ease-in-out infinite;
-    background-size: 200% 200%;  /* เพิ่มขนาดพื้นหลังให้ใหญ่กว่าพื้นที่ เพื่อให้เคลื่อนที่ */
+  background-size: 200% 200%;
   background-repeat: no-repeat;
 
 }
@@ -343,9 +356,11 @@ section.profile {
   0% {
     background-position: 0% 0%;
   }
+
   50% {
     background-position: 100% 100%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -365,6 +380,7 @@ section.profile .intro p {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -373,44 +389,42 @@ section.profile .intro p {
 
 
 section.profile .intro {
-  flex: 1 1 300px;           /* ยืดหยุ่น ครึ่งหนึ่งขั้นต่ำ 300px */
-  max-width: 500px;
-  margin-left: 60px;
-    animation: fadeInUp 1s ease forwards;
-  animation-delay: 0.3s;
+  flex: 0 1 400px; /* กำหนดความกว้างสูงสุด */
+  margin-left: 0; /* เอา margin ออก */
+  text-align: left;
 }
 
 section.profile .intro h2 {
-  font-weight: 400;
-  font-size: 1.5rem;
+  font-weight: 1000px;
+  font-size: 2.7rem;
   margin-bottom: 8px;
-    animation: fadeInUp 1s ease forwards;
+  animation: fadeInUp 1s ease forwards;
   animation-delay: 0.8s;
-    text-shadow: 0 0 5px #2890ff, 0 0 10px #28b4ff;
+  text-shadow: 0 0 5px #2890ff, 0 0 10px #28b4ff;
 }
 
 section.profile .intro h1 {
-  font-weight: 700;
-  font-size: 2.5rem;
+  font-weight: 1000px;
+  font-size: 3.0rem;
   margin-bottom: 12px;
-    animation: fadeInUp 1s ease forwards;
+  animation: fadeInUp 1s ease forwards;
   animation-delay: 1.0s;
   text-shadow: 0 0 5px #2890ff, 0 0 10px #28b4ff;
 }
 
 section.profile .intro p {
-  font-size: 1.1rem;
+  font-size: 2.0rem;
   margin-bottom: 20px;
   color: #89dfff;
   text-shadow: 0 0 5px #2890ff, 0 0 10px #28b4ff;
-      animation: fadeInUp 1s ease forwards;
+  animation: fadeInUp 1s ease forwards;
   animation-delay: 1.3s;
 }
 
 section.profile .social-links a {
   color: white;
   margin-right: 15px;
-  font-size: 1.5rem;
+  font-size: 2.3rem;
   transition: color 1.3s;
   animation: fadeInUp 1s ease forwards;
 }
@@ -419,9 +433,11 @@ section.profile .social-links a {
 section.profile .social-links a:nth-child(1) {
   animation-delay: 1.6s;
 }
+
 section.profile .social-links a:nth-child(2) {
   animation-delay: 1.8s;
 }
+
 section.profile .social-links a:nth-child(3) {
   animation-delay: 2.0s;
 }
@@ -431,80 +447,246 @@ section.profile .social-links a:nth-child(3) {
 
 section.profile .social-links a:hover {
   color: #007bff;
-    animation: textShadowPulse 2s infinite ease-in-out;
+  animation: textShadowPulse 2s infinite ease-in-out;
 }
 
-section.profile .profile {
-  flex: 1 1 250px;           /* ยืดหยุ่น ครึ่งหนึ่งขั้นต่ำ 250px */
-  max-width: 350px;
-  text-align: center;
-}
 
 section.profile .profile img {
-  max-width: 100%;
+    height: 460px;
+  width: auto;
   border-radius: 10px;
-  margin-bottom: 15px;
+  object-fit: cover;
+  max-width: 100%;
 }
 
-section.profile .quote {
-     font-family: 'Raleway', sans-serif;
-  color: #f2f2f2;
-   text-shadow: 0 0 10px #2890ff, 0 0 20px #28b4ff;
+
+
+.profile-image {
+  height: 260px;
+  width: auto;
+  /* ให้ความกว้างปรับตามอัตราส่วน */
+  max-width: 100%;
+  /* ไม่เกินขนาด container */
+  object-fit: cover;
+  /* ตัดขอบภาพให้เต็มพื้นที่ */
 }
 
-section.profile .quote h5 {
-  font-size: 0.8rem;
-  color: #fffde1;
-  margin-bottom: 0.3rem;
-  font-style: normal; /* ไม่เอา italic ให้หัวข้อดูชัด */
-      text-shadow: 0 0 10px #2890ff, 0 0 20px #28b4ff;
-}
 
-section.profile .quote p {
-  font-size: 0.6rem;
-  line-height: 1.4;
-  margin: 0;
-}
-
-.profile-image{
-    height: 260px;
-      width: auto;      /* ให้ความกว้างปรับตามอัตราส่วน */
-  max-width: 100%;  /* ไม่เกินขนาด container */
-  object-fit: cover; /* ตัดขอบภาพให้เต็มพื้นที่ */
-}
-
-/* ปรับสำหรับมือถือ */
-@media (max-width: 768px) {
-  section.profile {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
+@keyframes colorChange {
+  0% {
+    color: rgb(13, 0, 96);
   }
-  section.profile .intro,
-  section.profile .profile {
-    max-width: 100%;
+
+  50% {
+    color: rgb(0, 30, 87);
   }
-  section.profile .intro {
 
-  margin-left: 0px;
-}
-.profile-image{
-height: auto;
-
-    
+  100% {
+    color: #0f006e;
+  }
 }
 
-
+.about {
+  padding: 60px 20px;
+  animation: colorChange 4s infinite;
+  scroll-margin-top: 120px;
+  background: linear-gradient(45deg, #ffffff, #b3dfff, #c0efff, #ffffff, #c2feff);
+  animation: gradientMove 15s ease-in-out infinite;
+  height: 80Vh;
+  font-size: 1.5rem;
 
 }
 
-section.about {
-    height: calc(100vh - 60px);
-    background-color: #ffffff;
-    color: white;
-    padding: 20px;
-    min-height: 100vh;
+.about-wrapper {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #0b023e;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5rem;
 }
+
+.about-left {
+  flex: 1 1 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-left img {
+  max-width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  height: auto;
+}
+
+.about-right {
+  flex: 1 1 65%;
+}
+
+/* Tab styles */
+.tabs {
+  margin: 20px 0;
+  
+}
+
+.tab-button {
+  color: #0b023e;
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 8px;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  transition: border-bottom 0.3s;
+  border-bottom: 3px solid transparent;
+  font-size: 1.3rem;
+}
+
+.tab-button:hover {
+  border-bottom: 3px solid #0b023e;
+}
+
+.tab-button.active {
+  border-bottom: 3px solid #0b023e;
+  color: #0b023e;
+  font-weight: 900;
+  background: none;
+}
+
+.tab-content p {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 6px;
+  color: #0b023e;
+  font-size: 1.3rem;
+  line-height: 1.5;
+
+}
+
+
+.profile p {
+  margin-bottom: 10px;
+  /* เว้นระยะบรรทัด */
+  color: #010f3d;
+  font-size: 1.5rem;
+
+  gap: 10px;
+  /* ช่องว่างระหว่างไอคอนกับข้อความ */
+}
+
+.skill {
+  padding: 60px 20px;
+  animation: colorChange 4s infinite;
+  scroll-margin-top: 120px;
+  background: linear-gradient(45deg, #ffffff, #b3dfff, #c0efff, #ffffff, #c2feff);
+  animation: gradientMove 15s ease-in-out infinite;
+  height: 100Vh;
+    font-size: 3rem;
+
+}
+
+.skills-wrapper {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px 25px;
+  background: rgb(255, 255, 255);
+  /* ลดความทึบลงเพื่อให้เบลอเห็นผล */
+  color: #00103c;
+  ;
+}
+
+.skills-wrapper h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.skill h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 3.5rem;
+  /* เล็กลง */
+}
+
+.skill-item {
+  margin-bottom: 12px;
+  /* กระชับลง */
+}
+
+.skill-name {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+}
+
+.skill-bar {
+  background: rgb(8, 1, 27);
+  /* สีพื้นหลังหลอดแบบโปร่งแสง */
+
+  border-radius: 10px;
+  overflow: hidden;
+  height: 35px;
+  position: relative;
+
+}
+
+.skill-level {
+  height: 100%;
+  border-radius: 10px;
+  position: relative;
+  background: linear-gradient(270deg,
+      #0ff,
+      #0ff,
+      #0ff,
+      #06f,
+      #0ff,
+      #0ff);
+  background-size: 600% 100%;
+  animation: neonMove 3s linear infinite;
+  font-size: 1.3rem;
+  text-align: right;
+  padding-right: 10px;
+}
+
+/* แสง neon เคลื่อนไหว */
+@keyframes neonMove {
+  0% {
+    background-position: 0% 50%;
+    box-shadow:
+      0 0 6px #0ff,
+      0 0 12px #0ff,
+      0 0 18px #06f,
+      0 0 30px #0ff,
+      0 0 40px #06f;
+  }
+
+  50% {
+    background-position: 100% 50%;
+    box-shadow:
+      0 0 8px #0ff,
+      0 0 14px #0ff,
+      0 0 22px #06f,
+      0 0 36px #0ff,
+      0 0 50px #06f;
+  }
+
+  100% {
+    background-position: 0% 50%;
+    box-shadow:
+      0 0 6px #0ff,
+      0 0 12px #0ff,
+      0 0 18px #06f,
+      0 0 30px #0ff,
+      0 0 40px #06f;
+  }
+}
+
+
 
 /* section.profile {
     width: 60%;
@@ -526,3 +708,529 @@ section.content {
     font-size: 1rem;
     line-height: 1.6;
 } */
+.education {
+  padding: 40px 20px;
+  background: linear-gradient(-45deg, #06072C, #000000, #010459, #06072C, #06072C);
+
+  font-family: 'Raleway', sans-serif;
+  color: #ffffff;
+  /* สีตัวหนังสือขาว */
+  scroll-margin-top: 120px;
+  animation: gradientMove 7s ease-in-out infinite;
+}
+
+.education .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.education .container h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  color: #fff;
+
+}
+
+.education .container h3 {
+  text-align: left;
+  font-size: 1.5rem;
+  color: #000844;
+
+}
+
+.education .container p {
+  text-align: left;
+  font-size: 1.3rem;
+  color: #000844;
+
+}
+
+
+/* Timeline */
+.education .timeline {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.education .timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background-color: #fff;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Timeline items */
+.education .timeline-item {
+  position: relative;
+  width: 45%;
+  padding: 20px 30px;
+  margin-bottom: 40px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  color: #fff;
+
+}
+
+.education .timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.education .timeline-item.right {
+  left: 55%;
+  text-align: left;
+}
+
+.education .timeline-item::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  opacity: 1;
+  z-index: 2;
+
+}
+
+.education .timeline-item.left::after {
+  left: 100%;
+}
+
+.education .timeline-item.right::after {
+  left: 0;
+}
+
+/* เอาออกไป */
+.timeline-item::before {
+  content: none;
+  /* หรือ ลบโค้ดนี้ทิ้งได้เลย */
+}
+
+.timeline .center-dot {
+  position: absolute;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+
+
+.project {
+  padding: 60px 20px;
+  background: linear-gradient(45deg, #06072C, #000000, #010459);
+  color: white;
+  text-align: center;
+    scroll-margin-top: 120px;
+  animation: gradientMove 7s ease-in-out infinite;
+  height: 100vh;
+
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-shadow: 0 0 5px #2890ff, 0 0 10px #28b4ff;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #cce7ff;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #28b4ff;
+}
+
+
+
+.btn-view {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #001e3f;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin-top: 10px;
+  box-shadow: 0 0 8px #3094ff;
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 100%;
+
+}
+
+.btn-view:hover {
+  background: #1a6fd4;
+  box-shadow: 0 0 15px #28b4ff, 0 0 25px #28b4ff;
+  transform: translateY(-3px);
+}
+
+.contact {
+  background: linear-gradient(135deg, #06072C, #010320);
+  padding: 60px 20px;
+      scroll-margin-top: 120px;
+  animation: gradientMove 7s ease-in-out infinite;
+  height: 100vh;
+  color: #ffffff;
+
+}
+
+.contact .container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  margin-bottom: 30px;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+.btn {
+  background: #ffffff;
+  color: #2F36C9;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #dfe4ff;
+}
+
+.social-linkss {
+  margin-top: 30px;
+}
+
+.social-linkss a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-linkss a:hover {
+  color: #dfe4ff;
+}
+
+/* ปรับสำหรับมือถือ */
+@media (max-width: 768px) {
+
+    .logo-mobile {
+    display: flex;
+  }
+
+  .nav-container {
+    justify-content: space-between;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .nav-mobile {
+    display: block;
+    /* แสดงโลโก้มือถือ */
+  }
+
+  .nav-mobile {
+    display: none;
+    flex-direction: column;
+  }
+
+  .nav-mobile.active {
+    display: flex;
+    pointer-events: auto;
+  }
+
+
+  section.profile {
+    flex-direction: column; /* จัดเรียงเป็นแนวตั้ง */
+    text-align: center; /* จัดข้อความตรงกลาง */
+    gap: 10px; /* ลดระยะห่าง */
+    padding: 40px 15px;
+  }
+
+  section.profile .intro {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  section.profile .intro h2 {
+    font-size: 2.0rem;
+  }
+
+  section.profile .intro h1 {
+    font-size: 2.3rem;
+  }
+
+  section.profile .intro p {
+    font-size: 1.4rem;
+  }
+
+  section.profile .social-links a {
+    font-size: 1.8rem;
+    margin-right: 10px;
+  }
+
+  .profile-image {
+    height: auto;
+    max-width: 80%; /* ให้รูปเล็กลงนิดนึง */
+  }
+
+  
+
+ .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-left,
+  .about-right {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .about-right {
+    padding: 0 10px; /* ลด padding ให้พอดี */
+  }
+
+  .tab-content {
+    width: 100% !important; /* ให้เนื้อหาแท็บเต็มความกว้าง */
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-left: 0 !important; /* ปรับถ้ามี padding เกิน */
+    text-align: left;
+    font-size: 0.3rem;
+  }
+
+  .profile p {
+    text-align: left;
+  }
+
+  .tab-button {
+    padding: 8px 16px;
+    margin-right: 6px;
+  }
+
+  .about-left img {
+    max-width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    height: auto;
+  }
+
+  .skill{
+    height: 200vh;
+  }
+
+  
+  /* ปรับขนาดและรูปแบบหลอดพลังงาน */
+  .skills-wrapper {
+    max-width: 90%;
+    padding: 15px 20px;
+  }
+
+  .skill-item {
+    margin-bottom: 10px;
+  }
+
+  .skill-name {
+    font-size: 0.55rem;
+  }
+
+  .skill-bar {
+    height: 12px;
+  }
+
+  .skill-level {
+    font-size: 0.55rem;
+    padding-right: 6px;
+  }
+
+
+
+  
+  /* เส้น timeline */
+  .education .timeline::before {
+    left: 20px;
+    /* เลื่อนเส้น timeline มาทางซ้าย */
+    height: 100%;
+  }
+
+  /* card เต็มความกว้าง */
+  .education .timeline-item {
+    width: 100% !important;
+    left: 0 !important;
+    padding-left: 60px;
+    /* เว้นช่องว่างสำหรับเส้น timeline และวงกลม */
+    padding-right: 20px;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  /* วงกลม (จุด) */
+  .education .timeline-item::after {
+    display: none;
+  }
+
+  .timeline .center-dot {
+    display: none;
+  }
+
+
+  /* ตัด ::before ของ timeline-item (ถ้ามี) */
+  .education .timeline-item::before {
+    display: none;
+  }
+
+  /* ข้อความใน card */
+  .education .timeline-item h3 {
+    font-size: 1.2rem;
+    margin-top: 0;
+    text-align: left;
+  }
+
+  .education .timeline-item p {
+    margin: 6px 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-align: left;
+  }
+
+  .education .timeline-item p em {
+    text-align: left;
+  }
+  .project{
+    height: 200vh;
+ 
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
+  }
+
+  .contact {
+    padding: 40px 15px;
+    height: auto; /* ให้ความสูงปรับตามเนื้อหา */
+  }
+
+  .contact h2 {
+    font-size: 2rem; /* ลดขนาดหัวข้อ */
+  }
+
+  .contact p {
+    font-size: 0.9rem;
+  }
+
+  .contact-form {
+    gap: 10px;
+  }
+
+  .btn {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  .social-linkss {
+    margin-top: 20px;
+  }
+
+  .social-linkss a {
+    font-size: 1.3rem;
+    margin: 0 8px;
+  }
+}
