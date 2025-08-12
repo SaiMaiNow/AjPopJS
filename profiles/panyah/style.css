@@ -382,3 +382,141 @@ body::before {
         padding: 20px;
     }
 }
+.content.projects-page {
+    padding: 0;
+    min-height: auto;
+    width: 100%;
+}
+
+.projects-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Project Category Section */
+.project-category {
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+.category-header {
+    text-align: center;
+    padding: 2rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+}
+
+/* Diagonal background effect for headers */
+.category-header::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200%;
+    height: 200%;
+    background-color: #2155C3; /* สีพื้นหลังเฉียงๆ ตามภาพ */
+    transform: rotate(-10deg);
+    z-index: 1;
+}
+
+.category-header.web-dev-bg::before {
+    background-color: #2155C3;
+}
+.category-header.ux-ui-bg::before {
+    background-color: #2155C3;
+}
+.category-header.innovation-bg::before {
+    background-color: #2155C3;
+}
+.category-header.java-bg::before {
+    background-color: #2155C3;
+}
+.category-header.activity-bg::before {
+    background-color: #2155C3;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 5%;
+}
+
+/* Project Card (กล่องผลงานย่อย) */
+.project-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-info h3 {
+    font-size: 1.5rem;
+    color: #2F36C9;
+    margin-bottom: 0.5rem;
+}
+
+.project-info p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.project-tools {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.project-tools span {
+    font-weight: bold;
+    color: #444;
+}
+
+.project-tools img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
