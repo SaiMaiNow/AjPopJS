@@ -173,11 +173,16 @@ h2.logo {
     padding: 0;               /* ลดช่องว่าง */
     outline: none;            /* ลบเส้นขอบเวลาโฟกัส */
 
-    color: #ffffff;
+    color: #ff3434;
     font-size: 2.0rem;
     cursor: pointer;
      text-shadow: 0 0 10px #2862ff, 0 0 20px #2862ff;
 
+}
+
+.mobile-menu-close:hover {
+    color: #ff3434;
+  transform: rotate(90deg);
 }
 
 /* เมนูมือถือแบบ fullscreen overlay ซ่อนโดยดีฟอลต์ */
