@@ -1,4 +1,3 @@
-/* Common styles from profile.css */
 body {
     font-family: 'Inter', sans-serif;
     color: #fff;
@@ -10,7 +9,6 @@ body {
     padding: 10px 0;
 }
 
-/* Desktop Navigation */
 @media (min-width: 992px) {
     .header .navmenu ul {
         list-style: none;
@@ -39,7 +37,6 @@ body {
     }
 }
 
-/* Mobile Navigation */
 @media (max-width: 991px) {
     .header .navmenu {
         position: fixed;
@@ -159,9 +156,6 @@ body {
     border-top: 1px solid #333;
 }
 
-/* New CSS for About Page */
-
-/* Page Title Section */
 .page-title {
     padding: 100px 0 0 0;
 }

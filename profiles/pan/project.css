@@ -1,4 +1,3 @@
-/* Common styles from profile.css */
 body {
     font-family: 'Inter', sans-serif;
     color: #fff;
@@ -10,7 +9,6 @@ body {
     padding: 10px 0;
 }
 
-/* Desktop Navigation */
 @media (min-width: 992px) {
     .header .navmenu ul {
         list-style: none;
@@ -39,7 +37,6 @@ body {
     }
 }
 
-/* Mobile Navigation */
 @media (max-width: 991px) {
     .header .navmenu {
         position: fixed;
@@ -159,7 +156,6 @@ body {
     border-top: 1px solid #333;
 }
 
-/* Page Title Section */
 .page-title {
     padding: 100px 0 0 0;
 }
@@ -208,7 +204,6 @@ body {
     content: "/";
 }
 
-/* Project Category Title */
 .category-title {
     font-size: 2rem;
     font-weight: 700;
@@ -218,12 +213,10 @@ body {
     text-align: center;
 }
 
-/* Projects Section */
 .projects {
     padding: 60px 0;
 }
 
-/* Project Item Box */
 .project-item {
     position: relative;
     overflow: hidden;
@@ -278,7 +271,6 @@ body {
     color: #ccc;
 }
 
-/* Project Icons */
 .project-icons {
     display: flex;
     justify-content: flex-end;
@@ -298,19 +290,17 @@ body {
     color: #00BFFF;
 }
 
-/* **โค้ดใหม่สำหรับไอคอนรูปภาพ** */
 .project-icons img {
-    width: 24px; /* กำหนดขนาดความกว้าง */
-    height: 24px; /* กำหนดขนาดความสูง */
+    width: 24px; 
+    height: 24px; 
     transition: transform 0.3s ease;
     cursor: pointer;
 }
 
 .project-icons img:hover {
-    transform: scale(1.1); /* ขยายขนาดเล็กน้อยเมื่อนำเมาส์ไปชี้ */
+    transform: scale(1.1);
 }
 
-/* Modal Custom Styling */
 .modal-content {
     background-color: #111;
     color: #fff;

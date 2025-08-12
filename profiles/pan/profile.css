@@ -9,7 +9,6 @@ body {
     padding: 10px 0;
 }
 
-/* Desktop */
 @media (min-width: 992px) {
     .header .navmenu ul {
         list-style: none;
@@ -38,16 +37,15 @@ body {
     }
 }
 
-/* Mobile */
 @media (max-width: 991px) {
     .header .navmenu {
         position: fixed;
         top: 0;
-        right: -80%; /* เมนูเริ่มอยู่ทางขวาของหน้าจอ */
+        right: -80%;
         width: 80%;
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.9);
-        transition: right 0.3s ease-in-out; /* ใช้ right เพื่อเลื่อนจากขวา */
+        transition: right 0.3s ease-in-out; 
         z-index: 1000;
         padding: 20px;
         display: flex;
@@ -55,7 +53,7 @@ body {
     }
 
     body.mobile-nav-active .navmenu {
-        right: 0; /* เมนูเลื่อนมาอยู่ที่ขวาสุด */
+        right: 0; 
     }
 
     .header .navmenu ul {
