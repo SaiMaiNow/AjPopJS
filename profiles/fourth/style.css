@@ -1,0 +1,271 @@
+/* CSS สำหรับการจัดสไตล์ทั้งหมด */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --background-color: #1a1a2e;
+    --card-color: #ffffff;
+    --text-color: #34495e;
+    --light-text-color: #7f8c8d;
+    --dark-card-color: #2e2e4e;
+    --dark-text-color: #e0e0ff;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: var(--background-color);
+    color: var(--dark-text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profile-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    background-color: var(--dark-card-color);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    margin-top: 30px;
+}
+
+.sidebar {
+    background-color: #3e3e6e;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid var(--secondary-color);
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.sidebar h2 {
+    font-size: 1.8rem;
+    color: var(--dark-text-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.info-item label {
+    font-weight: 600;
+    display: block;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.main-content {
+    background-color: var(--dark-card-color);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.main-content h2 {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.education-item, .skills-grid {
+    margin-bottom: 20px;
+}
+
+.education-item h4 {
+    margin: 0;
+    color: var(--dark-text-color);
+    font-size: 1.2rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    text-align: left;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    background-color: #3e3e6e;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.skill-item i {
+    margin-right: 10px;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+}
+
+/* Projects Section */
+.projects-section {
+    margin-top: 30px;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.project-item {
+    padding: 15px;
+    background-color: #3e3e6e;
+    border-radius: 8px;
+    border: 1px solid #5a5a8a;
+}
+
+.project-item h4 {
+    margin-top: 0;
+    color: var(--dark-text-color);
+    font-size: 1.2rem;
+}
+
+.project-item p {
+    margin-bottom: 15px;
+    color: var(--light-text-color);
+}
+
+.project-link {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #2980b9;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: var(--background-color);
+    padding: 60px 20px;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    background-color: var(--dark-card-color);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    margin-top: 30px;
+}
+
+.contact-info {
+    color: var(--dark-text-color);
+}
+
+.contact-info h3 {
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+
+.contact-info p {
+    color: var(--light-text-color);
+}
+
+.social-icons a {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
+
+.contact-details p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-details i {
+    color: var(--secondary-color);
+    margin-right: 10px;
+}
+
+.contact-form {
+    background-color: #3e3e6e;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4a4a70;
+    color: var(--dark-text-color);
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #2980b9;
+}
+
+.form-note {
+    font-size: 0.8rem;
+    color: var(--light-text-color);
+    margin-top: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-layout {
+        grid-template-columns: 1fr;
+    }
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+}
