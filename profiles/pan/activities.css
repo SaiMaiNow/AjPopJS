@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Noto+Sans+Thai:wght@400;500;700&display=swap');
 
 body {
-    font-family: 'Roboto', 'Noto Sans Thai', sans-serif; /* Using both fonts for English and Thai */
+    font-family: 'Roboto', 'Noto Sans Thai', sans-serif;
     color: #FFFFFF;
     background-color: #000000; 
     line-height: 1.6;
@@ -168,7 +168,7 @@ a:hover {
 .footer .sitename {
     font-weight: 700;
     color: #FFFFFF;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .footer p {
