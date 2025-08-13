@@ -7,43 +7,50 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* CSS สำหรับการจัดสไตล์ทั้งหมด */
         :root {
             --primary-color: #2c3e50;
             --secondary-color: #3498db;
-            --background-color: #ecf0f1;
+            --background-color: #1a1a2e; /* สีพื้นหลังเข้มขึ้น */
             --card-color: #ffffff;
             --text-color: #34495e;
             --light-text-color: #7f8c8d;
+            --dark-card-color: #2e2e4e; /* สีการ์ดสำหรับพื้นหลังเข้ม */
+            --dark-text-color: #e0e0ff;
         }
 
         body {
             font-family: 'Kanit', sans-serif;
             background-color: var(--background-color);
-            color: var(--text-color);
+            color: var(--dark-text-color);
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            line-height: 1.6;
         }
 
-        .profile-container {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            max-width: 900px;
-            background-color: var(--card-color);
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .profile-layout {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+            background-color: var(--dark-card-color);
             border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            margin-top: 30px;
         }
-
-        .header-section {
-            background-color: var(--primary-color);
-            color: #fff;
-            padding: 40px;
+        
+        .sidebar {
+            background-color: #3e3e6e;
+            border-radius: 10px;
+            padding: 20px;
             text-align: center;
         }
 
@@ -54,89 +61,123 @@
             border: 5px solid var(--secondary-color);
             object-fit: cover;
             margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
-        .header-section h1 {
+        .sidebar h2 {
+            font-size: 1.8rem;
+            color: var(--dark-text-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .info-item label {
             font-weight: 600;
-            font-size: 2.5rem;
-            margin: 0;
+            display: block;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
         }
 
-        .header-section h2 {
-            font-weight: 300;
-            font-size: 1.2rem;
-            margin: 5px 0 0;
-            color: #bdc3c7;
-        }
-
-        .content-section {
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        .info-card {
-            background-color: #f8f9fa;
-            border-left: 5px solid var(--secondary-color);
+        .main-content {
+            background-color: var(--dark-card-color);
+            border-radius: 10px;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .main-content h2 {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
         }
 
-        .info-card h3 {
-            font-weight: 600;
-            color: var(--primary-color);
-            margin-top: 0;
+        .education-item, .skills-grid {
+            margin-bottom: 20px;
+        }
+
+        .education-item h4 {
+            margin: 0;
+            color: var(--dark-text-color);
+            font-size: 1.2rem;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            text-align: left;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            background-color: #3e3e6e;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        
+        .skill-item i {
+            margin-right: 10px;
+            color: var(--secondary-color);
             font-size: 1.5rem;
         }
 
-        .skills-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skills-list li {
-            background-color: var(--secondary-color);
-            color: #fff;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 400;
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .profile-layout {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="profile-container">
-        <div class="header-section">
-            <img src="Profile-colin.JPG" alt="รูปโปรไฟล์ Fourth" class="profile-image">
-            <h1>คอลลิน แบล็ค</h1>
-            <h2>นักพัฒนาฝึกหัด (Junior Developer)</h2>
+    <div class="container">
+        <div class="profile-layout">
+            <div class="sidebar">
+                <img src="Profile-colin.JPG" alt="รูปโปรไฟล์ Fourth" class="profile-image">
+                <h2>PERSONAL INFORMATION</h2>
+                <div class="info-item">
+                    <label>ชื่อ</label>
+                    <p>คอลลิน แบล็ค</p>
+                </div>
+                <div class="info-item">
+                    <label>ตำแหน่ง</label>
+                    <p>นักพัฒนาฝึกหัด</p>
+                </div>
+                <div class="info-item">
+                    <label>เกี่ยวกับฉัน</label>
+                    <p>นักศึกษามหาวิทยาลัยเชียงใหม่</p>
+                </div>
+            </div>
+
+            <div class="main-content">
+                <div class="education-section">
+                    <h2>Education</h2>
+                    <div class="education-item">
+                        <h4>2024-Now</h4>
+                        <p><strong>Bachelor's Degree</strong></p>
+                        <p>Chiang Mai University</p>
+                    </div>
+                </div>
+
+                <div class="skills-section">
+                    <h2>Skills & Talents</h2>
+                    <div class="skills-grid">
+                        <div class="skill-item"><i class="fab fa-html5"></i><span>HTML</span></div>
+                        <div class="skill-item"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+                        <div class="skill-item"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+                        <div class="skill-item"><i class="fab fa-java"></i><span>Java</span></div>
+                        <div class="skill-item"><i class="fab fa-cuttlefish"></i>++</i><span>C++</span></div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="content-section">
-            <div class="info-card">
-                <h3>เกี่ยวกับฉัน</h3>
-                <p>นักศึกษาจากมหาวิทยาลัยเชียงใหม่ ผู้มีความมุ่งมั่นในการเรียนรู้และพัฒนาทักษะด้านการเขียนโปรแกรม โดยเฉพาะในสายงาน Web Development มีความกระตือรือร้นในการแก้ไขปัญหาและสร้างสรรค์ผลงานใหม่ๆ</p>
-            </div>
-
-            <div class="info-card">
-                <h3>ทักษะ</h3>
-                <ul class="skills-list">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>Java</li>
-                    <li>C++</li>
-                </ul>
-            </div>
-            
-            </div>
     </div>
 </body>
 </html>
