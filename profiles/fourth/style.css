@@ -1,0 +1,201 @@
+:root {
+    --primary-color: #66CDAA; /* Medium Aquamarine (เขียวอมฟ้าอ่อน) - สีเน้นหลัก */
+    --secondary-color: #87CEEB; /* Sky Blue (ฟ้าอ่อน) - สีเน้นรอง */
+    --background-color: #F8F8F8; /* Off-white (ขาวนวล) - พื้นหลังหลัก */
+    --card-color: #FFFFFF; /* White (ขาว) - พื้นหลังการ์ด/ส่วน */
+    --text-color: #333333; /* Dark Gray (เทาเข้ม) - สีข้อความหลัก */
+    --light-text-color: #666666; /* Medium Gray (เทากลาง) - สีข้อความรอง */
+    --border-color-light: #DDDDDD; /* Light Gray (เทาอ่อน) - สีเส้นแบ่ง */
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profile-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    background-color: var(--card-color); 
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+    margin-top: 30px;
+    align-items: stretch;
+}
+
+.sidebar {
+    background-color: var(--card-color); 
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); 
+}
+
+.profile-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color); 
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.sidebar h2 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    border-bottom: 2px solid var(--primary-color); 
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.info-item label {
+    font-weight: 600;
+    display: block;
+    color: var(--primary-color); 
+    margin-bottom: 5px;
+}
+
+.contact-sidebar-details {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color-light); 
+    text-align: left;
+    color: var(--text-color); 
+}
+
+.contact-sidebar-details p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: var(--text-color); 
+}
+
+.contact-sidebar-details i {
+    color: var(--primary-color); 
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.social-icons-sidebar {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color-light);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons-sidebar a {
+    color: var(--primary-color); 
+    font-size: 1.8rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons-sidebar a:hover {
+    color: var(--secondary-color); 
+    transform: scale(1.1);
+}
+
+.main-content {
+    background-color: var(--card-color); 
+    border-radius: 10px;
+    padding: 20px;
+    padding-top: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); 
+}
+
+.main-content h2 {
+    color: var(--text-color); 
+    border-bottom: 2px solid var(--primary-color); 
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    margin-top: 0;
+}
+
+.company-about-section, .our-solutions-section, .skills-section {
+    margin-bottom: 30px;
+    background-color: var(--card-color); 
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color-light); 
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.03); 
+    color: var(--text-color); 
+}
+
+.company-about-section h2, .our-solutions-section h2 {
+    color: var(--text-color);
+    border-bottom: 2px solid var(--primary-color); 
+}
+
+.our-solutions-section p, .company-about-section p {
+    color: var(--text-color);
+}
+
+.solution-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.solution-list li {
+    margin-bottom: 8px;
+    padding-left: 25px;
+    position: relative;
+    color: var(--text-color); 
+}
+
+.solution-list li::before {
+    content: '\2022';
+    color: var(--primary-color); 
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    text-align: left;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    background-color: var(--background-color); 
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color-light); 
+    color: var(--text-color); 
+}
+
+.skill-item i {
+    margin-right: 10px;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .profile-layout {
+        grid-template-columns: 1fr;
+    }
+}
