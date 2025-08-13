@@ -1,12 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Noto+Sans+Thai:wght@400;500;700&display=swap');
+
 body {
     font-family: 'Inter', sans-serif;
     color: #fff;
     background-color: #000;
+    line-height: 1.6;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
 }
 
 .header {
     background-color: rgba(0, 0, 0, 0.8);
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
 @media (min-width: 992px) {
@@ -20,15 +29,33 @@ body {
     }
 
     .header .navmenu a {
-        color: #fff;
+        position: relative;
+        color: #FFFFFF;
         font-weight: 500;
         text-decoration: none;
-        transition: color 0.3s;
+        padding-bottom: 5px;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .header .navmenu a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #2F36C9;
+        transition: width 0.3s ease;
     }
 
     .header .navmenu a.active,
     .header .navmenu a:hover {
-        color: #00BFFF;
+        color: #2F36C9;
+    }
+
+    .header .navmenu a.active::after,
+    .header .navmenu a:hover::after {
+        width: 100%;
     }
 
     .header .mobile-nav-toggle,
@@ -44,7 +71,7 @@ body {
         right: -80%;
         width: 80%;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: #000000;
         transition: right 0.3s ease-in-out;
         z-index: 1000;
         padding: 20px;
@@ -66,18 +93,18 @@ body {
     }
 
     .header .navmenu a {
-        color: #fff;
+        color: #FFFFFF;
         font-weight: 500;
         text-decoration: none;
         display: block;
         padding: 10px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(47, 54, 201, 0.3);
         transition: color 0.3s;
     }
 
     .header .navmenu a.active,
     .header .navmenu a:hover {
-        color: #00BFFF;
+        color: #2F36C9;
     }
 
     .header .mobile-nav-toggle {
@@ -104,7 +131,7 @@ body {
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(6, 7, 44, 0.9);
         z-index: 999;
         opacity: 0;
         visibility: hidden;
@@ -140,7 +167,9 @@ body {
 }
 
 .hero-image {
-    position: relative;
+    position:  absolute;
+    top: 0;
+    left: 0;
     height: 100vh;
     width: 100%;
     max-width: 100%;
@@ -151,16 +180,17 @@ body {
 .hero-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     max-width: 100%;
     display: block;
+    filter: brightness(55%);
 }
 
-.hero .hero-container {
+.hero .container {
     text-align: left;
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 330px;
+    text-align: center;
     transform: translateY(-50%);
     padding: 20px;
     z-index: 1;
@@ -169,22 +199,42 @@ body {
 .hero h2 {
     font-size: 4rem;
     font-weight: 700;
+    color: #ffffff ;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.693);
 }
 
 .hero p {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-style: italic;
-    color: #ccc;
+    color: #ffffff;
+}
+
+@media (max-width: 991px) {
+    .hero .container {
+        top: 20%;
+        left: 5%;
+        transform: none;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
 }
 
 .typed {
     font-weight: 700;
-    color: #00BFFF;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
+
 }
 
 .typed-cursor {
     font-size: 1.5rem;
-    color: #00BFFF;
+    color: #747474;
     animation: blink 1s infinite;
 }
 
@@ -194,32 +244,54 @@ body {
     }
 }
 
+.social-links a {
+    margin-right: 10px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.859);
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #2F36C9;
+}
+
+.social-links {
+    gap: 10px;
+}
+
 .footer {
-    background-color: #000;
+    background-color: #04001b;
     padding: 30px 0;
     text-align: center;
-    border-top: 1px solid #333;
 }
 
 .footer .sitename {
     font-weight: 700;
     color: #fff;
+    font-size: 1rem;
+
 }
 
 .footer p {
-    color: #aaa;
+    color: #CCCCCC;
 }
 
 .footer .social-links a {
     color: #fff;
-    font-size: 1.25rem;
-    margin: 0 5px;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer .social-links a:hover {
+    color: #2F36C9;
 }
 
 .copyright {
     font-size: 0.75rem;
-    color: #888;
+    color: #888888;
     margin-top: 20px;
     padding-top: 10px;
-    border-top: 1px solid #333;
+    border-top: 1px solid #2F36C9;
 }
