@@ -1,3 +1,4 @@
+/* CSS สำหรับการจัดสไตล์ทั้งหมด */
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
@@ -72,11 +73,10 @@ body {
     margin-bottom: 5px;
 }
 
-/*Styles for contact details in sidebar */
 .contact-sidebar-details {
     margin-top: 20px;
     padding-top: 15px;
-    border-top: 1px solid #4a4a70; 
+    border-top: 1px solid #4a4a70;
     text-align: left;
 }
 
@@ -93,19 +93,18 @@ body {
     font-size: 1.1rem;
 }
 
-/*Styles for social icons in sidebar */
 .social-icons-sidebar {
     margin-top: 20px;
     padding-top: 15px;
-    border-top: 1px solid #4a4a70; 
+    border-top: 1px solid #4a4a70;
     display: flex;
     justify-content: center;
-    gap: 20px; 
+    gap: 20px;
 }
 
 .social-icons-sidebar a {
     color: var(--secondary-color);
-    font-size: 1.8rem; 
+    font-size: 1.8rem;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -118,7 +117,7 @@ body {
     background-color: var(--dark-card-color);
     border-radius: 10px;
     padding: 20px;
-    padding-top: 25px; 
+    padding-top: 25px;
 }
 
 .main-content h2 {
@@ -127,8 +126,47 @@ body {
     padding-bottom: 10px;
     margin-bottom: 20px;
     font-size: 1.8rem;
-    margin-top: 0; /* ตรวจสอบให้แน่ใจว่าไม่มี margin-top เกินจำเป็น */
+    margin-top: 0;
 }
+
+/* NEW: Styles for company sections */
+.company-about-section, .our-solutions-section {
+    margin-bottom: 30px; /* ระยะห่างระหว่าง sections */
+    background-color: #3e3e6e;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.company-about-section h2, .our-solutions-section h2 {
+    margin-top: 0;
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.solution-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.solution-list li {
+    margin-bottom: 8px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.solution-list li::before {
+    content: '\2022'; /* Bullet point */
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
 
 .skills-grid {
     display: grid;
