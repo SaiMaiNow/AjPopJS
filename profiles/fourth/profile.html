@@ -3,38 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>โปรไฟล์ของ Fourth</title>
+    <title>โปรไฟล์ของ คอลลิน แบล็ค</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        /* CSS สำหรับการจัดสไตล์ทั้งหมด */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #ecf0f1;
+            --card-color: #ffffff;
+            --text-color: #34495e;
+            --light-text-color: #7f8c8d;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: 'Kanit', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 900px;
+            background-color: var(--card-color);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header-section {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 40px;
             text-align: center;
-            padding: 50px;
         }
-        .profile-card {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            max-width: 600px;
-            margin: auto;
-        }
+
         .profile-image {
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
+            border: 5px solid var(--secondary-color);
             object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-section h1 {
+            font-weight: 600;
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .header-section h2 {
+            font-weight: 300;
+            font-size: 1.2rem;
+            margin: 5px 0 0;
+            color: #bdc3c7;
+        }
+
+        .content-section {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .info-card {
+            background-color: #f8f9fa;
+            border-left: 5px solid var(--secondary-color);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .info-card h3 {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skills-list li {
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 400;
         }
     </style>
 </head>
 <body>
-    <div class="profile-card">
-        <img src="Profile-colin.JPG" alt="รูปโปรไฟล์ Fourth" class="profile-image">
-        <h1>ชื่อ คอลลิน แบล็ค</h1>
-        <p>ตำแหน่ง: นักพัฒนาฝึกหัด</p>
-        <p>เกี่ยวกับฉัน: นักศึกษามหาวิทยาลับเชียงใหม่</p>
-        <p>ทักษะ: HTML, CSS , Java ,Js</p>
+    <div class="profile-container">
+        <div class="header-section">
+            <img src="Profile-colin.JPG" alt="รูปโปรไฟล์ Fourth" class="profile-image">
+            <h1>คอลลิน แบล็ค</h1>
+            <h2>นักพัฒนาฝึกหัด (Junior Developer)</h2>
+        </div>
+
+        <div class="content-section">
+            <div class="info-card">
+                <h3>เกี่ยวกับฉัน</h3>
+                <p>นักศึกษาจากมหาวิทยาลัยเชียงใหม่ ผู้มีความมุ่งมั่นในการเรียนรู้และพัฒนาทักษะด้านการเขียนโปรแกรม โดยเฉพาะในสายงาน Web Development มีความกระตือรือร้นในการแก้ไขปัญหาและสร้างสรรค์ผลงานใหม่ๆ</p>
+            </div>
+
+            <div class="info-card">
+                <h3>ทักษะ</h3>
+                <ul class="skills-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Java</li>
+                    <li>C++</li>
+                </ul>
+            </div>
+            
+            </div>
     </div>
 </body>
 </html>
