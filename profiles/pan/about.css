@@ -204,7 +204,6 @@ body {
     content: "/";
 }
 
-/* About Section */
 .about .content h2 {
     font-size: 2rem;
     font-weight: 700;
@@ -249,5 +248,71 @@ body {
 @media (max-width: 991px) {
     .about .content {
         margin-top: 20px;
+    }
+}
+
+.skills {
+    padding: 60px 0;
+}
+
+.skills .section-title {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.skills .section-subtitle {
+    font-size: 14px;
+    font-weight: 500;
+    color: #00BFFF;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.skills .section-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.skills-box {
+    padding: 30px;
+    border-radius: px;
+}
+
+.skill-item {
+    margin-bottom: 25px;
+}
+
+.skill-name {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #fff;
+    display: inline-block;
+}
+
+.skill-percent {
+    float: right;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.progress {
+    height: 8px;
+    background-color: #333;
+    border-radius: 0px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: #00BFFF;
+    height: 100%;
+    transition: width 0.6s ease;
+}
+
+@media (max-width: 991px) {
+    .col-lg-6:first-child {
+        padding-bottom: 25px;
+        margin-bottom: 25px;
     }
 }
