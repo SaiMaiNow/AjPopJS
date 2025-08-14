@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  
 }
 
 html {
@@ -735,6 +736,7 @@ section.content {
   font-size: 3rem;
   margin-bottom: 40px;
   color: #fff;
+  text-shadow: 0 0 5px #2890ff, 0 0 10px #28b4ff;
 
 }
 
@@ -843,7 +845,7 @@ section.content {
   text-align: center;
     scroll-margin-top: 120px;
   animation: gradientMove 7s ease-in-out infinite;
-  height: 80vh;
+  height: 100vh;
 
 }
 
@@ -878,11 +880,30 @@ section.content {
 .project-card h3 {
   font-size: 1.3rem;
   margin-bottom: 10px;
+  text-shadow: 0 0 5px #2890ff, 0 0 10px #28b4ff;
 }
 
-.project-card p {
-  font-size: 1rem;
+
+
+.text-box {
+  width: 100%;      /* ความกว้างของกล่อง */
+  height: 50px;      /* ความสูงของกล่อง */
+  border: 0px solid #ccc;
+  padding: 8px;
+  overflow: auto;    /* ถ้าข้อความเกินจะแสดง scroll bar */
+  font-family: Arial, sans-serif;
+    font-size: 1rem;
   color: #cce7ff;
+  background-color: rgba(255, 255, 255, 0.05);
+  /* ซ่อน scrollbar */
+  scrollbar-width: none; /* สำหรับ Firefox */
+  -ms-overflow-style: none; /* สำหรับ IE และ Edge รุ่นเก่า */
+  margin-bottom: 30px;
+
+}
+
+.text-box::-webkit-scrollbar {
+  display: none; /* สำหรับ Chrome, Safari และ Edge รุ่นใหม่ */
 }
 
 .project-card:hover {
@@ -916,11 +937,12 @@ section.content {
 }
 
 
+
 .contact {
   background-color: #000003;
   position: relative;
   padding: 60px 20px;
-  height: 80vh;
+  height: 90vh;
   color: #ffffff;
   overflow: hidden; 
   scroll-margin-top: 120px;
@@ -948,6 +970,7 @@ section.content {
 .contact h2 {
   font-size: 2.5rem;
   margin-bottom: 10px;
+  text-shadow: 0 0 5px #2890ff, 0 0 10px #28b4ff;
 }
 
 .contact p {
@@ -1078,7 +1101,7 @@ section.content {
   }
 
   .about{
-    margin-bottom: 80vh;
+    margin-bottom: 30vh;
   }
   
 
@@ -1123,7 +1146,7 @@ section.content {
   }
 
   .skill{
-    margin-top: 100vh;
+    margin-top: 10vh;
   }
 
   
@@ -1204,7 +1227,7 @@ section.content {
     text-align: left;
   }
   .project{
-    height: 200vh;
+    height: 210vh;
  
   }
 
