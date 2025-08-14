@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Canvas สำหรับพื้นหลังเคลื่อนไหว -->
+    <canvas id="animatedBackgroundCanvas"></canvas>
+
     <div class="container">
         <div class="profile-layout">
             <div class="sidebar">
@@ -43,12 +46,12 @@
             </div>
 
             <div class="main-content">
-                <div class="company-about-section">
+                <div class="company-about-section js-fade-in-section">
                     <h2>About Our Company</h2>
                     <p>บริษัท <strong>อ้ายpoptech</strong> มุ่งมั่นที่จะเป็นผู้นำด้านการจัดจำหน่ายและพัฒนาซอฟต์แวร์สำหรับธุรกิจ เรานำเสนอโซลูชันที่ครอบคลุมสำหรับหลากหลายอุตสาหกรรม เพื่อยกระดับประสิทธิภาพและเพิ่มขีดความสามารถในการแข่งขันให้กับธุรกิจของคุณ</p>
                 </div>
 
-                <div class="our-solutions-section">
+                <div class="our-solutions-section js-fade-in-section">
                     <h2>Our Solutions</h2>
                     <p>เราให้บริการโปรแกรมสำหรับธุรกิจหลักๆ ดังนี้:</p>
                     <ul class="solution-list">
@@ -59,18 +62,49 @@
                     <p>เราแบ่งกลุ่มลูกค้าออกเป็น 3 ระดับในแต่ละหมวดหมู่ ได้แก่ ลูกค้ารายย่อย (เล็ก), ลูกค้าระดับกลาง (กลาง), และองค์กรขนาดใหญ่ (ใหญ่) เพื่อให้มั่นใจว่าเราสามารถตอบสนองความต้องการที่หลากหลายได้อย่างมีประสิทธิภาพ</p>
                 </div>
 
-                <div class="skills-section">
+                <div class="skills-section js-fade-in-section">
                     <h2>Skills & Talents</h2>
                     <div class="skills-grid">
-                        <div class="skill-item"><i class="fab fa-html5"></i><span>HTML</span></div>
-                        <div class="skill-item"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
-                        <div class="skill-item"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
-                        <div class="skill-item"><i class="fab fa-java"></i><span>Java</span></div>
-                        <div class="skill-item"><i class="fab fa-cuttlefish"></i>++</i><span>C++</span></div>
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML</span>
+                            <div class="skill-progress-bar">
+                                <div class="skill-progress" data-level="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS</span>
+                            <div class="skill-progress-bar">
+                                <div class="skill-progress" data-level="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                            <div class="skill-progress-bar">
+                                <div class="skill-progress" data-level="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                            <div class="skill-progress-bar">
+                                <div class="skill-progress" data-level="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-cuttlefish"></i>++</i>
+                            <span>C++</span>
+                            <div class="skill-progress-bar">
+                                <div class="skill-progress" data-level="60"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="script.js" defer></script>
 </body>
 </html>
