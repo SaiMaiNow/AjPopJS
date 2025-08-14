@@ -1,3 +1,8 @@
+html {
+    background-color: #1a1a1a;
+    scroll-behavior: smooth; 
+}
+
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -6,4 +11,61 @@ body {
 
 .noto-font {
     font-family: 'Noto Sans Thai', sans-serif;
+}
+
+.delay-200 {
+    animation-delay: 200ms;
+}
+
+.delay-400 {
+    animation-delay: 400ms;
+}
+
+.delay-600 {
+    animation-delay: 600ms;
+}
+
+.delay-800 {
+    animation-delay: 800ms;
+}
+
+.delay-1000 {
+    animation-delay: 1000ms;
+}
+
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.scroll-animation {
+    opacity: 0;
+    animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animation-navbar {
+    opacity: 0;
+    animation: slideDown 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 1s;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

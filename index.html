@@ -16,7 +16,7 @@
 
 <body>
     <div class="min-h-screen bg-gradient-to-br from-[#06072C] via-[#2F36C9] to-[#06072C]">
-        <nav class="relative z-50 p-6">
+        <nav class="relative z-50 p-6 top-0 animation-navbar">
             <div class="max-w-7xl mx-auto">
                 <div class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 px-6 py-4">
                     <div class="flex justify-between items-center">
@@ -35,59 +35,515 @@
 
         <section class="relative px-20 py-2">
             <div class="max-w-7xl mx-auto text-center">
-                <div class="bg-white/10 backdrop-blur-md rounded-3xl border border-white/20 p-12 mb-12">
-                    <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 noto-font">
-                        โซลูชั่นซอฟต์แวร์
+                <div class="bg-white/10 backdrop-blur-md rounded-3xl border border-white/20 p-12 mb-12 scroll-animation">
+                    <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 noto-font scroll-animation delay-200">
+                        อ้ายป๊อปเทค
                         <br />
                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-200 noto-font">
                             สำหรับธุรกิจของคุณ
                         </span>
                     </h1>
-                    <p class="text-xl text-white/80 mb-8 max-w-3xl mx-auto noto-font">
+                    <p class="text-xl text-white/80 mb-8 max-w-3xl mx-auto noto-font scroll-animation delay-400">
                         ผู้เชี่ยวชาญด้านระบบ POS, จัดการโรงแรม, ที่พัก และคลังสินค้า
                         พร้อมให้บริการครบครันสำหรับธุรกิจทุกขนาด
                     </p>
                     <div class="flex flex-wrap justify-center gap-4">
                         <button
-                            class="bg-white text-[#2F36C9] px-8 py-4 rounded-xl font-semibold hover:bg-white/90 transition-all transform hover:scale-105 noto-font">
+                            class="bg-white text-[#2F36C9] px-8 py-4 rounded-xl font-semibold hover:bg-white/90 transition-all transform hover:scale-105 noto-font scroll-animation delay-600">
                             เริ่มต้นใช้งาน
                         </button>
                         <button
-                            class="border border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all noto-font">
+                            class="border border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all noto-font scroll-animation delay-800">
                             ดูข้อมูลเพิ่มเติม
                         </button>
                     </div>
                 </div>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 px-4 scroll-animation delay-200">
                 <div class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-6 text-center">
-                    <div class="text-white mb-4 flex justify-center">{stat.icon}</div>
+                    <div class="text-white mb-4 flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2">
+                                <path d="M18 21a8 8 0 0 0-16 0" />
+                                <circle cx="10" cy="8" r="5" />
+                                <path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3" />
+                            </g>
+                        </svg>
+                    </div>
                     <div class="text-3xl font-bold text-white mb-2">500+</div>
-                    <div class="text-white/70">ลูกค้าที่ไว้วางใจ</div>
+                    <div class="text-white/70 noto-font">ลูกค้าที่ไว้วางใจ</div>
                 </div>
 
                 <div class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-6 text-center">
-                    <div class="text-white mb-4 flex justify-center">{stat.icon}</div>
+                    <div class="text-white mb-4 flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2">
+                                <path
+                                    d="m15.477 12.89l1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" />
+                                <circle cx="12" cy="8" r="6" />
+                            </g>
+                        </svg>
+                    </div>
                     <div class="text-3xl font-bold text-white mb-2">5+</div>
-                    <div class="text-white/70">ปีประสบการณ์</div>
+                    <div class="text-white/70 noto-font">ปีประสบการณ์</div>
                 </div>
 
                 <div class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-6 text-center">
-                    <div class="text-white mb-4 flex justify-center">{stat.icon}</div>
+                    <div class="text-white mb-4 flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M12 22q-3.475-.875-5.738-3.988T4 11.1V5l8-3l8 3v6.1q0 3.8-2.262 6.913T12 22m0-2.1q2.6-.825 4.3-3.3t1.7-5.5V6.375l-6-2.25l-6 2.25V11.1q0 3.025 1.7 5.5t4.3 3.3m0-7.9" />
+                        </svg>
+                    </div>
                     <div class="text-3xl font-bold text-white mb-2">99.9%</div>
-                    <div class="text-white/70">Uptime</div>
+                    <div class="text-white/70 noto-font">Uptime</div>
                 </div>
 
                 <div class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-6 text-center">
-                    <div class="text-white mb-4 flex justify-center">{stat.icon}</div>
+                    <div class="text-white mb-4 flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M9 21H3v-9q0-1.875.713-3.512t1.924-2.85t2.85-1.925T12 3t3.513.713t2.85 1.924t1.925 2.85T21 12v9h-6v-8h4v-1q0-2.925-2.037-4.962T12 5T7.038 7.038T5 12v1h4zm-2-6H5v4h2zm10 0v4h2v-4zM7 15H5zm10 0h2z" />
+                        </svg>
+                    </div>
                     <div class="text-3xl font-bold text-white mb-2">24/7</div>
-                    <div class="text-white/70">การสนับสนุน</div>
+                    <div class="text-white/70 noto-font">การสนับสนุน</div>
                 </div>
             </div>
-    </section>
-    </div>
-    <script src="./script/script.js"></script>
-</body>
+        </section>
+        <section id="services" class="px-6 py-20">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-white mb-4 noto-font">บริการของเรา</h2>
+                    <p class="text-xl text-white/70 noto-font">ซอฟต์แวร์คุณภาพสูงสำหรับทุกประเภทธุรกิจ</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 noto-font" id="services-list">
+
+                </div>
+
+                <div class="mt-16 bg-white/10 backdrop-blur-md rounded-3xl border border-white/20 p-8">
+                    <div class="text-center mb-8">
+                        <div class="text-white mb-4 flex justify-center" id="service-detail-icon">
+
+                        </div>
+                        <h3 class="text-3xl font-bold text-white mb-4 noto-font" id="service-detail-title"></h3>
+                        <p class="text-xl text-white/70 noto-font" id="service-detail-description"></p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 noto-font"
+                        id="service-detail-feature">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-us" class="px-6 py-20">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-white mb-4 noto-font">ทำไมต้องเลือกเรา</h2>
+                    <p class="text-xl text-white/70 noto-font">เหตุผลที่ลูกค้ากว่า 500+ รายไว้วางใจเรา</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div
+                        class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 text-center hover:bg-white/15 transition-all duration-300">
+                        <div class="text-white mb-6 flex justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M12 22q-3.475-.875-5.738-3.988T4 11.1V5l8-3l8 3v6.1q0 3.8-2.262 6.913T12 22m0-2.1q2.6-.825 4.3-3.3t1.7-5.5V6.375l-6-2.25l-6 2.25V11.1q0 3.025 1.7 5.5t4.3 3.3m0-7.9" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4 noto-font">ความปลอดภัยสูง</h3>
+                        <p class="text-white/70 noto-font">ระบบรักษาความปลอดภัยระดับธนาคาร เข้ารหัสข้อมูลทุกการทำงาน</p>
+                    </div>
+
+                    <div
+                        class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 text-center hover:bg-white/15 transition-all duration-300">
+                        <div class="text-white mb-6 flex justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" viewBox="0 0 24 24">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2">
+                                    <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0-18 0" />
+                                    <path d="M12 7v5l3 3" />
+                                </g>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4 noto-font">"ใช้งานง่าย รวดเร็ว</h3>
+                        <p class="text-white/70 noto-font">ออกแบบให้ใช้งานง่าย เรียนรู้ได้เร็ว ประหยัดเวลาในการทำงาน</p>
+                    </div>
+
+                    <div
+                        class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 text-center hover:bg-white/15 transition-all duration-300">
+                        <div class="text-white mb-6 flex justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M9 21H3v-9q0-1.875.713-3.512t1.924-2.85t2.85-1.925T12 3t3.513.713t2.85 1.924t1.925 2.85T21 12v9h-6v-8h4v-1q0-2.925-2.037-4.962T12 5T7.038 7.038T5 12v1h4zm-2-6H5v4h2zm10 0v4h2v-4zM7 15H5zm10 0h2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4 noto-font">สนับสนุน 24/7</h3>
+                        <p class="text-white/70 noto-font">ทีมงานผู้เชี่ยวชาญพร้อมให้การสนับสนุนตลอด 24 ชั่วโมง</p>
+                    </div>
+
+                    <div
+                        class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 text-center hover:bg-white/15 transition-all duration-300">
+                        <div class="text-white mb-6 flex justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="m16 6l2.29 2.29l-4.88 4.88l-4-4L2 16.59L3.41 18l6-6l4 4l6.3-6.29L22 12V6z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4 noto-font">รองรับทุกอุปกรณ์</h3>
+                        <p class="text-white/70 noto-font">ใช้งานได้ทั้งคอมพิวเตอร์ แท็บเล็ต และสมาร์ทโฟน</p>
+                    </div>
+
+                    <div
+                        class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 text-center hover:bg-white/15 transition-all duration-300">
+                        <div class="text-white mb-6 flex justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99M17 19H7V5h10z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4 noto-font">รองรับทุกอุปกรณ์</h3>
+                        <p class="text-white/70 noto-font">ใช้งานได้ทั้งคอมพิวเตอร์ แท็บเล็ต และสมาร์
+                    </div>
+
+                    <div
+                        class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 text-center hover:bg-white/15 transition-all duration-300">
+                        <div class="text-white mb-6 flex justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M12 21q-3.775 0-6.387-1.162T3 17V7q0-1.65 2.638-2.825T12 3t6.363 1.175T21 7v10q0 1.675-2.613 2.838T12 21m0-11.975q2.225 0 4.475-.638T19 7.025q-.275-.725-2.512-1.375T12 5q-2.275 0-4.462.638T5 7.025q.35.75 2.538 1.375T12 9.025M12 14q1.05 0 2.025-.1t1.863-.288t1.675-.462T19 12.525v-3q-.65.35-1.437.625t-1.675.463t-1.863.287T12 11t-2.05-.1t-1.888-.288T6.4 10.15T5 9.525v3q.625.35 1.4.625t1.663.463t1.887.287T12 14m0 5q1.15 0 2.338-.175t2.187-.462t1.675-.65t.8-.738v-2.45q-.65.35-1.437.625t-1.675.463t-1.863.287T12 16t-2.05-.1t-1.888-.288T6.4 15.15T5 14.525V17q.125.375.788.725t1.662.638t2.2.462T12 19" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4 noto-font">ข้อมูลสำรองอัตโนมัติ</h3>
+                        <p class="text-white/70 noto-font">ระบบสำรองข้อมูลอัตโนมัติ ไม่ต้องกังวลเรื่องข้อมูลสูญหาย</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="px-6 py-20 max-w-7xl mx-auto noto-font">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">แพ็กเกจราคา</h2>
+                <p class="text-xl text-white/70 mb-4">เลือกแพ็กเกจที่เหมาะสมกับขนาดธุรกิจของคุณ</p>
+                <div
+                    class="bg-gradient-to-r from-green-400 to-green-600 text-white px-6 py-3 rounded-full inline-block">
+                    <svg class="w-5 h-5 inline mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" />
+                    </svg>
+                    โปรโมชั่นพิเศษ! ลด 25% สำหรับลูกค้าใหม่
+                </div>
+            </div>
+            <div class="bg-white/10 backdrop-blur-md rounded-3xl border border-white/20 p-8 mb-12">
+                <div class="flex flex-wrap justify-center gap-4 mb-8" id="pricing-buttons">
+                    <!-- Service buttons will be rendered here -->
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="pricing-tiers">
+                    <!-- Pricing tiers will be rendered here -->
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-6 text-center">
+                    <svg class="w-12 h-12 text-white mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="m6.35 15.35l-2.1-2.15q1.55-1.55 3.55-2.375T12 10t4.213.838t3.537 2.412l-2.1 2.1q-1.125-1.125-2.588-1.737T12 13t-3.062.613T6.35 15.35M2.1 11.1L0 9q2.375-2.425 5.488-3.713T12 4t6.513 1.288T24 9l-2.1 2.1q-1.975-1.975-4.538-3.037T12 7T6.637 8.063T2.1 11.1M12 21l-3.525-3.55q.7-.7 1.613-1.075T12 16t1.913.375t1.612 1.075z" />
+                    </svg>
+                    <h3 class="text-xl font-bold text-white mb-2">Cloud-Based</h3>
+                    <p class="text-white/70">เข้าถึงได้ทุกที่ทุกเวลา</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-6 text-center">
+                    <svg class="w-12 h-12 text-white mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5"
+                            d="M12 21a9 9 0 1 0 0-18m0 18a9 9 0 1 1 0-18m0 18c2.761 0 3.941-5.163 3.941-9S14.761 3 12 3m0 18c-2.761 0-3.941-5.163-3.941-9S9.239 3 12 3M3.5 9h17m-17 6h17" />
+                    </svg>
+                    <h3 class="text-xl font-bold text-white mb-2">Multi-Language</h3>
+                    <p class="text-white/70">รองรับภาษาไทยและอังกฤษ</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-6 text-center">
+                    <svg class="w-12 h-12 text-white mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="512"
+                        height="512" viewBox="0 0 512 512">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M64 64h64v298.667H64zm106.667 149.333h64v149.334h-64zM448 170.667h-64v192h64zm-170.667-64h64v256h-64zM448 405.333H64V448h384z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <h3 class="text-xl font-bold text-white mb-2">Real-time Reports</h3>
+                    <p class="text-white/70">รายงานแบบเรียลไทม์</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="px-6 py-20">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-white mb-4 noto-font">ลูกค้าพูดถึงเรา</h2>
+                    <p class="text-xl text-white/70 noto-font">ความคิดเห็นจากลูกค้าที่ใช้บริการจริง</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 noto-font" id="testimonials-list">
+                    <!-- Testimonials will be rendered here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="px-6 py-20">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-white mb-4 noto-font">ติดต่อเรา</h2>
+                    <p class="text-xl text-white/70 noto-font">พร้อมให้คำปรึกษาและสนับสนุนคุณตลอด 24 ชั่วโมง</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8">
+                        <h3 class="text-2xl font-bold text-white mb-8 noto-font">ข้อมูลติดต่อ</h3>
+
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div class="bg-white/20 p-4 rounded-xl mr-4">
+                                    <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24">
+                                        <path fill="none" stroke="currentColor" stroke-dasharray="64"
+                                            stroke-dashoffset="64" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M8 3c0.5 0 2.5 4.5 2.5 5c0 1 -1.5 2 -2 3c-0.5 1 0.5 2 1.5 3c0.39 0.39 2 2 3 1.5c1 -0.5 2 -2 3 -2c0.5 0 5 2 5 2.5c0 2 -1.5 3.5 -3 4c-1.5 0.5 -2.5 0.5 -4.5 0c-2 -0.5 -3.5 -1 -6 -3.5c-2.5 -2.5 -3 -4 -3.5 -6c-0.5 -2 -0.5 -3 0 -4.5c0.5 -1.5 2 -3 4 -3Z">
+                                            <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s"
+                                                values="64;0" />
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-white/70 noto-font">โทรศัพท์</p>
+                                    <p class="text-white text-lg">02-123-4567</p>
+                                    <p class="text-white text-lg">089-123-4567</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center">
+                                <div class="bg-white/20 p-4 rounded-xl mr-4">
+                                    <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0l-8 4.99L4 6zm0 12H4V8l8 5l8-5z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-white/70 noto-font">อีเมล</p>
+                                    <p class="text-white text-lg">info@techsoft.co.th</p>
+                                    <p class="text-white text-lg">support@techsoft.co.th</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center">
+                                <div class="bg-white/20 p-4 rounded-xl mr-4">
+                                    <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5s2.5 1.12 2.5 2.5s-1.12 2.5-2.5 2.5z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-white/70 noto-font">ที่อยู่</p>
+                                    <p class="text-white text-lg noto-font">123 ถนนเทคโนโลยี แขวงนวัตกรรม<br />เขตอนาคต
+                                        กรุงเทพฯ 10110</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center">
+                                <div class="bg-white/20 p-4 rounded-xl mr-4">
+                                    <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24">
+                                        <g fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2">
+                                            <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0-18 0" />
+                                            <path d="M12 7v5l3 3" />
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-white/70 noto-font">เวลาทำการ</p>
+                                    <p class="text-white text-lg noto-font">จันทร์-ศุกร์: 9:00-18:00</p>
+                                    <p class="text-white text-lg noto-font">เสาร์-อาทิตย์: 9:00-17:00</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-8 border-t border-white/20">
+                            <h4 class="text-white font-bold mb-4 noto-font">ช่องทางอื่นๆ</h4>
+                            <div class="flex space-x-4">
+                                <div class="bg-green-500 p-3 rounded-xl">
+                                    <span class="text-white font-bold">LINE</span>
+                                </div>
+                                <div class="bg-blue-500 p-3 rounded-xl">
+                                    <span class="text-white font-bold">Facebook</span>
+                                </div>
+                                <div class="bg-red-500 p-3 rounded-xl">
+                                    <span class="text-white font-bold">YouTube</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8">
+                        <h3 class="text-2xl font-bold text-white mb-8 noto-font">ส่งข้อความหาเรา</h3>
+
+                        <form class="space-y-6 noto-font">
+                            <div>
+                                <input type="text" placeholder="ชื่อ-นามสกุล"
+                                    class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-white/40" />
+                            </div>
+                            <div>
+                                <input type="text" placeholder="ชื่อบริษัท/ร้าน"
+                                    class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-white/40" />
+                            </div>
+                            <div>
+                                <input type="email" placeholder="อีเมล"
+                                    class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-white/40" />
+                            </div>
+                            <div>
+                                <input type="tel" placeholder="เบอร์โทรศัพท์"
+                                    class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-white/40" />
+                            </div>
+                            <div>
+                                <select
+                                    class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white/40">
+                                    <option value="" class="bg-[#2F36C9] text-white noto-font">เลือกบริการที่สนใจ
+                                    </option>
+                                    <option value="pos" class="bg-[#2F36C9] text-white noto-font">ระบบ POS</option>
+                                    <option value="hotel" class="bg-[#2F36C9] text-white noto-font">จัดการโรงแรม
+                                    </option>
+                                    <option value="accommodation" class="bg-[#2F36C9] text-white noto-font">จัดการที่พัก
+                                    </option>
+                                    <option value="warehouse" class="bg-[#2F36C9] text-white noto-font">จัดการคลังสินค้า
+                                    </option>
+                                </select>
+                            </div>
+                            <div>
+                                <textarea placeholder="ข้อความ" rows={4}
+                                    class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-white/40 resize-none noto-font"></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-white text-[#2F36C9] py-3 rounded-xl font-semibold hover:bg-white/90 transition-all flex items-center justify-center noto-font">
+                                ส่งข้อความ
+                                <ChevronRight class="w-5 h-5 ml-2" />
+                            </button>
+                        </form>
+
+                        <div class="mt-6 p-4 bg-green-500/20 border border-green-500/30 rounded-xl">
+                            <p class="text-green-300 text-sm noto-font">
+                                <Check class="w-4 h-4 inline mr-2 noto-font" />
+                                เราจะติดต่อกลับภายใน 24 ชั่วโมง
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="px-6 py-12 border-t border-white/20">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                    <div>
+                        <div class="text-white font-bold text-2xl mb-4">AayPopTech</div>
+                        <p class="text-white/70 mb-4 noto-font">
+                            ผู้นำด้านซอฟต์แวร์จัดการธุรกิจในประเทศไทย
+                        </p>
+                        <div class="flex space-x-4">
+                            <div class="bg-white/20 p-2 rounded-lg">
+                                <svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M4.616 19q-.691 0-1.153-.462T3 17.384V6.616q0-.691.463-1.153T4.615 5h14.77q.69 0 1.152.463T21 6.616v10.769q0 .69-.463 1.153T19.385 19zM12 12.116L4 6.885v10.5q0 .269.173.442t.443.173h14.769q.269 0 .442-.173t.173-.443v-10.5zM12 11l7.692-5H4.308zM4 6.885V6v11.385q0 .269.173.442t.443.173H4z" />
+                                </svg>
+                            </div>
+                            <div class="bg-white/20 p-2 rounded-lg">
+                                <svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M19.5 22a1.5 1.5 0 0 0 1.5-1.5V17a1.5 1.5 0 0 0-1.5-1.5c-1.17 0-2.32-.18-3.42-.55a1.51 1.51 0 0 0-1.52.37l-1.44 1.44a14.77 14.77 0 0 1-5.89-5.89l1.43-1.43c.41-.39.56-.97.38-1.53c-.36-1.09-.54-2.24-.54-3.41A1.5 1.5 0 0 0 7 3H3.5A1.5 1.5 0 0 0 2 4.5C2 14.15 9.85 22 19.5 22M3.5 4H7a.5.5 0 0 1 .5.5c0 1.28.2 2.53.59 3.72c.05.14.04.34-.12.5L6 10.68c1.65 3.23 4.07 5.65 7.31 7.32l1.95-1.97c.14-.14.33-.18.51-.13c1.2.4 2.45.6 3.73.6a.5.5 0 0 1 .5.5v3.5a.5.5 0 0 1-.5.5C10.4 21 3 13.6 3 4.5a.5.5 0 0 1 .5-.5" />
+                                </svg>
+                            </div>
+                            <div class="bg-white/20 p-2 rounded-lg">
+                                <svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M12 2a8 8 0 0 0-8 7.92c0 5.48 7.05 11.58 7.35 11.84a1 1 0 0 0 1.3 0C13 21.5 20 15.4 20 9.92A8 8 0 0 0 12 2m0 17.65c-1.67-1.59-6-6-6-9.73a6 6 0 0 1 12 0c0 3.7-4.33 8.14-6 9.73" />
+                                    <path fill="currentColor"
+                                        d="M12 6a3.5 3.5 0 1 0 3.5 3.5A3.5 3.5 0 0 0 12 6m0 5a1.5 1.5 0 1 1 1.5-1.5A1.5 1.5 0 0 1 12 11" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-white font-bold mb-4 noto-font">บริการ</h4>
+                        <ul class="space-y-2 text-white/70">
+                            <li><a href="#" class="hover:text-white transition-colors">ระบบ POS</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors noto-font">จัดการโรงแรม</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors noto-font">จัดการที่พัก</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors noto-font">จัดการคลังสินค้า</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-white font-bold mb-4 noto-font">บริษัท</h4>
+                        <ul class="space-y-2 text-white/70">
+                            <li><a href="#" class="hover:text-white transition-colors noto-font">เกี่ยวกับเรา</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors noto-font">ทีมงาน</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors noto-font">ข่าวสาร</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors noto-font">ร่วมงานกับเรา</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-white font-bold mb-4 noto-font">สนับสนุน</h4>
+                        <ul class="space-y-2 text-white/70">
+                            <li><a href="#" class="hover:text-white transition-colors noto-font">คู่มือการใช้งาน</a>
+                            </li>
+                            <li><a href="#" class="hover:text-white transition-colors noto-font">FAQ</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors noto-font">ติดต่อสนับสนุน</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors noto-font">อัพเดท</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="border-t border-white/20 pt-8">
+                    <div class="flex flex-col md:flex-row justify-between items-center">
+                        <div class="text-white/60 mb-4 md:mb-0">
+                            © 2025 AayPopTech. All rights reserved.
+                        </div>
+                        <div class="flex space-x-6 text-white/60 noto-font">
+                            <a href="#" class="hover:text-white transition-colors">นโยบายความเป็นส่วนตัว</a>
+                            <a href="#" class="hover:text-white transition-colors">เงื่อนไขการใช้งาน</a>
+                            <a href="#" class="hover:text-white transition-colors">คุกกี้</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scroll to top button -->
+        <button id="scroll-to-top"
+            class="fixed bottom-8 right-8 bg-white text-[#2F36C9] p-4 rounded-full shadow-lg transform transition-all duration-300 opacity-0 translate-y-10 hover:bg-white/90">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m18 15l-6-6l-6 6" />
+            </svg>
+        </button>
+
+        <script src="./script/script.js"></script>
+    </body>
 
 </html>
